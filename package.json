@@ -1,6 +1,6 @@
 {
   "name": "umanohone",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Scraper for Gramedia product pages",
   "main": "index.js",
   "scripts": {
