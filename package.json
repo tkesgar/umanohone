@@ -1,0 +1,40 @@
+{
+  "name": "umanohone",
+  "version": "0.0.0",
+  "description": "Scraper for Gramedia product pages",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro server.js",
+    "lint": "xo",
+    "test": "ava",
+    "watch:test": "ava --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkesgar/umanohone.git"
+  },
+  "keywords": [
+    "scraper",
+    "gramedia"
+  ],
+  "author": "Ted Kesgar <t.kesgar@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkesgar/umanohone/issues"
+  },
+  "homepage": "https://github.com/tkesgar/umanohone#readme",
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "xo": "^0.18.2"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "micro": "^8.0.1",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.4"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": true
+  }
+}

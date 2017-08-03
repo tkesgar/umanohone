@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" id="top" class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwcFUlBTGwECXFFaAQkD"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<title>Tom And Jerry Story Book: Kereta Orient Expres Toko Gramedia.com</title>
+<meta name="description"
+content="Toko buku online Gramedia.com menyediakan ratusan ribu judul buku dan produk-produk lain seperti stationery, alat..."/>
+<meta name="keywords" content="Gramedia, Gramedia online, Buku, Toko Buku, Audio Video, Musik and Sport, Stationary, Fancy, toko online, toko buku online, Komputer, and Elektronik, pre order buku, buku promo, buku diskon, Harry Potter cursed child buku, pre order Buku Harry Potter, Harry Potter and the cursed child Buku, pre-order Buku, pre-order Harry Potter and the cursed child buku"/>
+<meta name="robots" content="INDEX,FOLLOW"/>
+<link rel="icon" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/favicon_1.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/favicon_1.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-152x152.png" />
+<meta property="og:title"
+content="Tom And Jerry Story Book: Kereta Orient Expres"/>
+<meta property="og:type" content="product"/>
+<meta property="og:url" content="http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html"/>
+<meta property="og:image" content="http://wpc.21684.lambdacdn.net/8021684/cdn/media/catalog/product/cache/1/image/c96a280f94e22e3ee3823dd0a1a87606/placeholder/default/no_image.png"/>
+<meta property="og:image:secure_url" content="https://wpc.21684.lambdacdn.net/8021684/cdn/media/catalog/product/cache/1/image/c96a280f94e22e3ee3823dd0a1a87606/placeholder/default/no_image.png"/>
+<meta property="og:description"
+content=""/>
+<meta property="product:isbn" content="9789797796426">
+<meta property="product:brand" content="CITRA SASTRA NOVELTIS">
+<meta property="product:product_link" content="http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html"/>
+<meta property="og:site_name" content="Gramedia"/>
+<script type="application/ld+json">
+[{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"additionalType": "Organization",
+"url": "http://www.gramedia.com/",
+"sameAs": [
+"http://www.facebook.com/gramediacom",
+"http://www.twitter.com/gramedia_com",
+"https://www.youtube.com/channel/UCobQJNq_dkDETba7MS-3Ssg"
+],
+"potentialAction": {
+"@type": "SearchAction",
+"target": "http://www.gramedia.com/search/q={query}",
+"query-input": "required name=query"
+}
+},
+{
+"@context": "http://schema.org/",
+"@type": "Book",
+"@id": "#10684",
+"additionalType": "Product",
+"name": "Tom And Jerry Story Book: Kereta Orient Expres",
+"image": "http://wpc.21684.lambdacdn.net/8021684/cdn/media/catalog/product/cache/1/image/c96a280f94e22e3ee3823dd0a1a87606/placeholder/default/no_image.png",
+"description": "",
+"isbn": "9789797796426",
+"url": "http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html",
+"offers": {
+"@type": "Offer",
+"priceCurrency": "IDR",
+"price": "23000.0000",
+"sku": "204050135",
+"itemCondition": "http://schema.org/NewCondition",
+"availability": "http://schema.org/OutOfStock"
+},
+"author": {
+"@type": "Person",
+"name": "Warner Bros"
+},
+"publisher": {
+"@type": "Organization",
+"name": "Citra Sastra Noveltis"
+}
+}
+]
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+var BLANK_URL = 'http://www.gramedia.com/js/blank.html';
+var BLANK_IMG = 'http://www.gramedia.com/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/js/solrsearch/autocomplete.css" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/js/calendar/calendar-win2k-1.css" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/fonts.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/base/default/css/amasty/amfpc/styles.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/base/default/css/checkoutopc.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/base/default/css/gramedia/promopage.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/base/default/css/extra.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/base/default/solrsearch/css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/gramedia.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/base/default/advancedinventory/css/stocks.css" media="all" />
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/jquery.bxslider.css" media="all" />
+<script type="text/javascript" src="http://www.gramedia.com/js/prototype/prototype.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/lib/ccard.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/prototype/validation.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/scriptaculous/builder.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/scriptaculous/effects.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/scriptaculous/dragdrop.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/scriptaculous/controls.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/scriptaculous/slider.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/varien/js.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/varien/form.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/mage/translate.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/mage/cookies.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/solrsearch/autocomplete.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/varien/product.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/varien/configurable.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/calendar/calendar.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/js/calendar/calendar-setup.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/selectivizr.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/matchMedia.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/matchMedia.addListener.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/enquire.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/app.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/jquery.cycle2.swipe.min.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/slideshow.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/imagesloaded.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/minicart.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/local.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/bxslider.js"></script>
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/jquery.bxslider.min.js"></script>
+<link rel="canonical" href="http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html" />
+<!--[if (!IE) | (IEMobile)]><!-->
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/swiper.css" media="all" />
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/swiper.js"></script>
+<!--<![endif]-->
+<!--[if (gte IE 6) & (!IEMobile)]>
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/swiper-2.7.6.css" media="all" />
+<script type="text/javascript" src="http://www.gramedia.com/skin/frontend/gramedia/default/js/swiper-2.7.6.min.js"></script>
+<![endif]-->
+<!--[if (lte IE 8) & (!IEMobile)]>
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/styles-ie8.css" media="all" />
+<![endif]-->
+<!--[if (gte IE 9) | (IEMobile)]><!-->
+<link rel="stylesheet" type="text/css" href="http://www.gramedia.com/skin/frontend/gramedia/default/css/styles.css" media="all" />
+<!--<![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path = '/';
+Mage.Cookies.domain = '.www.gramedia.com';
+//]]>
+</script>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+</script>
+<!-- BEGIN GOOGLE ANALYTICS CODEs -->
+<script type="text/javascript">
+//<![CDATA[
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-57567756-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+//]]>
+</script>
+<!-- END GOOGLE ANALYTICS CODE -->
+<!-- START AMPLITUDE -->
+<script type="text/javascript">
+(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
+r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.4.0-min.gz.js";
+r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
+for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
+};var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
+for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp","logEventWithGroups"];
+function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+}}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
+if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
+})(window,document);
+amplitude.getInstance().init("e7dea0d33189534b68eabcd69b1d9534", null, {saveEvents: true, eventUploadPeriodMillis:3000, includeUtm: true, includeReferrer: true, saveParamsReferrerOncePerSession:false, batchEvents: true});
+var identify = new amplitude.Identify();
+identify.set('Device', 'Desktop');
+amplitude.getInstance().identify(identify);
+amplitude.getInstance().logEvent('View Product Page', JSON.parse('{\"item_id\":\"10684\",\"item_sku\":\"204050135\",\"title\":\"Tom And Jerry Story Book: Kereta Orient Expres\",\"price\":\"23000.0000\",\"final_price\":\"19550.0000\",\"category\":\"Toddlers\",\"format\":\"Original Printed\"}'));
+var amplitudeCheckout = [];
+document.observe("dom:loaded", function () {
+var urlLogin = 'http://www.gramedia.com/customer/account/login/';
+var urlLogout = 'http://www.gramedia.com/customer/account/logout/';
+var urlRegister = 'http://www.gramedia.com/customer/account/create/';
+var searchElem = '';
+var newHref = '';
+var fromSource = '';
+jQuery('.nav-top').on('click', 'li a[href*="ruang.gramedia.com"]', function () {
+amplitude.getInstance().logEvent('Visit Ruang', {});
+});
+jQuery('.additional-nav-top').on('click', 'li a[href*="ruang.gramedia.com"]', function () {
+amplitude.getInstance().logEvent('Visit Ruang', {});
+});
+});
+</script>
+<!--END AMPLITUDE-->
+<link rel="apple-touch-icon" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="http://wpc.21684.lambdacdn.net/8021684/cdn/media/favicon/default/apple-touch-icon-152x152.png" /><script type="text/javascript">//<![CDATA[
+var Translator = new Translate([]);
+//]]></script><!-- Begin Inspectlet Embed Code -->
+<script type="text/javascript" id="inspectletjs">
+window.__insp = window.__insp || [];
+__insp.push(['wid', 2072912398]);
+(function() {
+function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+})();
+</script>
+<!-- End Inspectlet Embed Code -->
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"d1n1o1QolK10Y8", domain:"gramedia.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=d1n1o1QolK10Y8" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<!-- Start of gramedia Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="gramedia.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+/*]]>*/</script>
+<!-- End of gramedia Zendesk Widget script --></head>
+<body class=" catalog-product-view catalog-product-view product-tom-and-jerry-story-book-kereta-orient-expres">
+<div class="wrapper">
+<noscript>
+<div class="global-site-notice noscript">
+<div class="notice-inner">
+<p>
+<strong>JavaScript seems to be disabled in your browser.</strong><br />
+You must have JavaScript enabled in your browser to utilize the functionality of this website. </p>
+</div>
+</div>
+</noscript>
+<div class="page">
+<div class="page-header-container">
+<div class="page-header">
+<div class="header-logo">
+<a class="logo" href="http://www.gramedia.com/">
+<div class="header-logo-image">
+<div class="swiper-logo-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-position: 0 0;background-image:url('http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/logo/gramedia-logo-image.png')"></div>
+<div class="swiper-slide" style="background-position: 50% 0;background-image:url('http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/logo/gramedia-logo-image.png')"></div>
+<div class="swiper-slide" style="background-position: 100% 0;background-image:url('http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/logo/gramedia-logo-image.png')"></div>
+</div>
+</div>
+</div>
+<div class="header-logo-text"><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/logo/gramedia-logo-text-desktop.png" alt="Gramedia" class="large" width="180" height="100" /></div>
+</a>
+</div>
+<div class="header-content">
+<div class="header-content-top">
+<div class="store-language-container">
+<div class="form-language">
+<div id="select-language" class="flags">
+<div class='language-option current-lang' style='background-image:url("http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png"); background-position:-520px -64px'>EN</div><div class='language-option' style='background-image:url("http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png"); background-position:-520px -37px' onclick="window.location='http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html?___store=id&amp;___from_store=en'">ID</div> </div>
+</div>
+</div>
+<div class="links">
+        <ul>
+        
+                                    
+                            <li class="first" ><a href="http://www.gramedia.com/customer/account/create/" title="Register" >Register</a></li>
+                    
+                                    
+                            <li class=" last" ><a href="http://www.gramedia.com/customer/account/login/" title="Log In" >Log In</a></li>
+                        </ul>
+</div>
+ </div>
+<div class="header-content-bottom">
+<div class="store-language-container"></div>
+<div id="header-search">
+<form id="search_mini_form" action="http://www.gramedia.com/search/" method="get">
+<div class="form-search">
+<label for="search">Search:</label>
+<input id="search" type="text" name="q" value="" class="input-text" />
+<button type="submit" title="Search" class="button"><span><span>Search</span></span></button>
+<div id="search_autocomplete" class="search-autocomplete"></div>
+<script type="text/javascript">
+//<![CDATA[
+var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Search entire store here...');
+var SolrBridgeAutocomplete = new SolrBridgeSearch('search',{id:'autocomplete',target:'#search_mini_form',inputid:'search',containerid:'search_mini_form',boxWidth:469,searchTextPlaceHolder:'Search entire store here...',currencySign:'&nbsp;Rp&nbsp;',currencycode:'IDR',ajaxBaseUrl:'http://www.gramedia.com',searchResultUrl:'http://www.gramedia.com/search',viewAllResultText:'View all search results for %s',categoryText:'Categories',viewAllCategoryText:'View all categories >>',viewAllBrandsText:'View all brands >>',keywordsText:'Keywords',productText:'product',productsText:'products',brandText:'Brands',storetimestamp:'1501812394',storeid:'1',customergroupid:'0',categoryRedirect:'0',showBrand:'0',showBrandAttributeCode:'manufacturer',displaykeywordsuggestion:'true',displayResultOfText:'Search results for %s',displayResultOfInsteadText:'Search results for %s instead',currencyPos:'before',displayThumb:'1',allowFilter:'1',categoryLimit:'3',brandLimit:'3',fromPriceText:'from',ajaxprice:0});
+//]]>
+</script>
+</div>
+</form> </div>
+<div class="header-minicart">
+
+<div class="block-top block-top-cart" id="block-top-cart">
+    	<div class="block-top-wrapper" onclick="window.location='http://www.gramedia.com/checkoutprocess/cart/'">
+		<div class="block-top-content">
+					<div class="summary">
+				<span class="subtotal">No item in cart</span>
+			</div>
+				</div>
+		<div class="block-top-clear"></div>
+	</div>
+	
+            
+</div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+<div class="top-menu-container">
+<div class="top-menu-inner">
+<nav id="topnav">
+<ol class="nav-top">
+<li class="level0 nav-1 first parent"><a href="http://www.gramedia.com/categories.html" data-id="299" data-name="Categories" class="level0 has-children" >Categories</a><ul class="level0" ><li class="level1 nav-1-1 first parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -246px -151px no-repeat' data-bip=' -246px -151px ' data-biph=' -494px -151px '><a href="http://www.gramedia.com/categories/books.html" data-id="300" data-name="Books" class="level1 has-children" >Books<span class='triangle'></span></a><ul class="level1" style="width:712px;"><span class='nav-sub-img' style='background:url(http://wpc.21684.lambdacdn.net/8021684/cdn/media/category/bkg-category-sprites.png) 0 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-1-1 first parent"><a href="http://www.gramedia.com/categories/books/childrens-books.html" data-id="309" data-name="Children's Books" class="level2 has-children" >Children's Books</a><ul class="level2" ><li class="level3 nav-1-1-1-1 first"><a href="http://www.gramedia.com/categories/books/childrens-books/babies.html" data-id="346" data-name="Babies" class="level3 " >Babies</a></li><li class="level3 nav-1-1-1-2"><a href="http://www.gramedia.com/categories/books/childrens-books/teens.html" data-id="347" data-name="Teens" class="level3 " >Teens</a></li><li class="level3 nav-1-1-1-3"><a href="http://www.gramedia.com/categories/books/childrens-books/toddlers.html" data-id="348" data-name="Toddlers" class="level3 " >Toddlers</a></li><li class="level3 nav-1-1-1-4 last"><a href="http://www.gramedia.com/categories/books/childrens-books/dream2015.html" data-id="351" data-name="Dreamlets " class="level3 " >Dreamlets </a></li></ul></li><li class="level2 nav-1-1-2 parent"><a href="http://www.gramedia.com/categories/books/fiction-literature.html" data-id="310" data-name="Fiction &amp; Literature" class="level2 has-children" >Fiction &amp; Literature</a><ul class="level2" ><li class="level3 nav-1-1-2-1 first"><a href="http://www.gramedia.com/categories/books/fiction-literature/classics.html" data-id="352" data-name="Classics" class="level3 " >Classics</a></li><li class="level3 nav-1-1-2-2"><a href="http://www.gramedia.com/categories/books/fiction-literature/drama.html" data-id="353" data-name="Drama" class="level3 " >Drama</a></li><li class="level3 nav-1-1-2-3"><a href="http://www.gramedia.com/categories/books/fiction-literature/essays.html" data-id="354" data-name="Essays" class="level3 " >Essays</a></li><li class="level3 nav-1-1-2-4"><a href="http://www.gramedia.com/categories/books/fiction-literature/graphic-novels-comic-books.html" data-id="355" data-name="Graphic Novels &amp; Comic Books" class="level3 " >Graphic Novels &amp; Comic Books</a></li><li class="level3 nav-1-1-2-5"><a href="http://www.gramedia.com/categories/books/fiction-literature/historical-fiction.html" data-id="356" data-name="Historical Fiction" class="level3 " >Historical Fiction</a></li><li class="level3 nav-1-1-2-6"><a href="http://www.gramedia.com/categories/books/fiction-literature/horror-suspense.html" data-id="357" data-name="Horror &amp; Suspense" class="level3 " >Horror &amp; Suspense</a></li><li class="level3 nav-1-1-2-7"><a href="http://www.gramedia.com/categories/books/fiction-literature/literature.html" data-id="358" data-name="Literature" class="level3 " >Literature</a></li><li class="level3 nav-1-1-2-8"><a href="http://www.gramedia.com/categories/books/fiction-literature/memoir.html" data-id="359" data-name="Memoir" class="level3 " >Memoir</a></li><li class="level3 nav-1-1-2-9"><a href="http://www.gramedia.com/categories/books/fiction-literature/mysteries-thrillers.html" data-id="360" data-name="Mysteries &amp; Thrillers" class="level3 " >Mysteries &amp; Thrillers</a></li><li class="level3 nav-1-1-2-10"><a href="http://www.gramedia.com/categories/books/fiction-literature/poetry.html" data-id="361" data-name="Poetry" class="level3 " >Poetry</a></li><li class="level3 nav-1-1-2-11"><a href="http://www.gramedia.com/categories/books/fiction-literature/religions-fiction.html" data-id="362" data-name="Religions Fiction" class="level3 " >Religions Fiction</a></li><li class="level3 nav-1-1-2-12"><a href="http://www.gramedia.com/categories/books/fiction-literature/romance.html" data-id="364" data-name="Romance" class="level3 " >Romance</a></li><li class="level3 nav-1-1-2-13"><a href="http://www.gramedia.com/categories/books/fiction-literature/science-fiction-fantasy.html" data-id="365" data-name="Science Fiction &amp; Fantasy" class="level3 " >Science Fiction &amp; Fantasy</a></li><li class="level3 nav-1-1-2-14"><a href="http://www.gramedia.com/categories/books/fiction-literature/short-stories.html" data-id="367" data-name="Short Stories" class="level3 " >Short Stories</a></li><li class="level3 nav-1-1-2-15 last"><a href="http://www.gramedia.com/categories/books/fiction-literature/war-military-fiction.html" data-id="370" data-name="War &amp; Military Fiction" class="level3 " >War &amp; Military Fiction</a></li></ul></li><li class="level2 nav-1-1-3 parent"><a href="http://www.gramedia.com/categories/books/agriculture.html" data-id="312" data-name="Agriculture" class="level2 has-children" >Agriculture</a><ul class="level2" ><li class="level3 nav-1-1-3-1 first"><a href="http://www.gramedia.com/categories/books/agriculture/agronomy.html" data-id="374" data-name="Agronomy" class="level3 " >Agronomy</a></li><li class="level3 nav-1-1-3-2"><a href="http://www.gramedia.com/categories/books/agriculture/fishery.html" data-id="375" data-name="Fishery" class="level3 " >Fishery</a></li><li class="level3 nav-1-1-3-3"><a href="http://www.gramedia.com/categories/books/agriculture/horticulture.html" data-id="376" data-name="Horticulture" class="level3 " >Horticulture</a></li><li class="level3 nav-1-1-3-4 last"><a href="http://www.gramedia.com/categories/books/agriculture/husbandry.html" data-id="377" data-name="Husbandry" class="level3 " >Husbandry</a></li></ul></li><li class="level2 nav-1-1-4 parent"><a href="http://www.gramedia.com/categories/books/art-architecture-photography.html" data-id="314" data-name="Art, Architecture &amp; Photography" class="level2 has-children" >Art, Architecture &amp; Photography</a><ul class="level2" ><li class="level3 nav-1-1-4-1 first"><a href="http://www.gramedia.com/categories/books/art-architecture-photography/architecture.html" data-id="378" data-name="Architecture" class="level3 " >Architecture</a></li><li class="level3 nav-1-1-4-2"><a href="http://www.gramedia.com/categories/books/art-architecture-photography/art.html" data-id="379" data-name="Art" class="level3 " >Art</a></li><li class="level3 nav-1-1-4-3 last"><a href="http://www.gramedia.com/categories/books/art-architecture-photography/photography.html" data-id="380" data-name="Photography" class="level3 " >Photography</a></li></ul></li><li class="level2 nav-1-1-5 parent"><a href="http://www.gramedia.com/categories/books/business-economics.html" data-id="315" data-name="Business &amp; Economics" class="level2 has-children" >Business &amp; Economics</a><ul class="level2" ><li class="level3 nav-1-1-5-1 first"><a href="http://www.gramedia.com/categories/books/business-economics/accounting.html" data-id="381" data-name="Accounting" class="level3 " >Accounting</a></li><li class="level3 nav-1-1-5-2"><a href="http://www.gramedia.com/categories/books/business-economics/business.html" data-id="382" data-name="Business" class="level3 " >Business</a></li><li class="level3 nav-1-1-5-3"><a href="http://www.gramedia.com/categories/books/business-economics/careers.html" data-id="383" data-name="Careers" class="level3 " >Careers</a></li><li class="level3 nav-1-1-5-4"><a href="http://www.gramedia.com/categories/books/business-economics/economics.html" data-id="384" data-name="Economics" class="level3 " >Economics</a></li><li class="level3 nav-1-1-5-5"><a href="http://www.gramedia.com/categories/books/business-economics/finance.html" data-id="385" data-name="Finance" class="level3 " >Finance</a></li><li class="level3 nav-1-1-5-6"><a href="http://www.gramedia.com/categories/books/business-economics/human-resources.html" data-id="386" data-name="Human Resources" class="level3 " >Human Resources</a></li><li class="level3 nav-1-1-5-7"><a href="http://www.gramedia.com/categories/books/business-economics/investing.html" data-id="387" data-name="Investing" class="level3 " >Investing</a></li><li class="level3 nav-1-1-5-8"><a href="http://www.gramedia.com/categories/books/business-economics/leadership.html" data-id="388" data-name="Leadership" class="level3 " >Leadership</a></li><li class="level3 nav-1-1-5-9"><a href="http://www.gramedia.com/categories/books/business-economics/management.html" data-id="389" data-name="Management" class="level3 " >Management</a></li><li class="level3 nav-1-1-5-10 last"><a href="http://www.gramedia.com/categories/books/business-economics/marketing-public-relations.html" data-id="390" data-name="Marketing &amp; Public Relations" class="level3 " >Marketing &amp; Public Relations</a></li></ul></li><li class="level2 nav-1-1-6 parent"><a href="http://www.gramedia.com/categories/books/computing-internet.html" data-id="316" data-name="Computing &amp; Internet" class="level2 has-children" >Computing &amp; Internet</a><ul class="level2" ><li class="level3 nav-1-1-6-1 first"><a href="http://www.gramedia.com/categories/books/computing-internet/applications-software.html" data-id="392" data-name="Applications &amp; Software" class="level3 " >Applications &amp; Software</a></li><li class="level3 nav-1-1-6-2"><a href="http://www.gramedia.com/categories/books/computing-internet/computer-science.html" data-id="393" data-name="Computer Science" class="level3 " >Computer Science</a></li><li class="level3 nav-1-1-6-3"><a href="http://www.gramedia.com/categories/books/computing-internet/database-management.html" data-id="394" data-name="Database Management" class="level3 " >Database Management</a></li><li class="level3 nav-1-1-6-4"><a href="http://www.gramedia.com/categories/books/computing-internet/graphics-design.html" data-id="395" data-name="Graphics &amp; Design" class="level3 " >Graphics &amp; Design</a></li><li class="level3 nav-1-1-6-5"><a href="http://www.gramedia.com/categories/books/computing-internet/hardware.html" data-id="396" data-name="Hardware" class="level3 " >Hardware</a></li><li class="level3 nav-1-1-6-6"><a href="http://www.gramedia.com/categories/books/computing-internet/networking.html" data-id="397" data-name="Networking" class="level3 " >Networking</a></li><li class="level3 nav-1-1-6-7"><a href="http://www.gramedia.com/categories/books/computing-internet/operating-systems.html" data-id="398" data-name="Operating Systems" class="level3 " >Operating Systems</a></li><li class="level3 nav-1-1-6-8 last"><a href="http://www.gramedia.com/categories/books/computing-internet/programming.html" data-id="399" data-name="Programming" class="level3 " >Programming</a></li></ul></li><li class="level2 nav-1-1-7 parent"><a href="http://www.gramedia.com/categories/books/cooking.html" data-id="317" data-name="Cooking" class="level2 has-children" >Cooking</a><ul class="level2" ><li class="level3 nav-1-1-7-1 first"><a href="http://www.gramedia.com/categories/books/cooking/drinks.html" data-id="400" data-name="Drinks" class="level3 " >Drinks</a></li><li class="level3 nav-1-1-7-2 last"><a href="http://www.gramedia.com/categories/books/cooking/foods.html" data-id="401" data-name="Foods" class="level3 " >Foods</a></li></ul></li><li class="level2 nav-1-1-8 parent"><a href="http://www.gramedia.com/categories/books/diet-health.html" data-id="318" data-name="Diet &amp; Health" class="level2 has-children" >Diet &amp; Health</a><ul class="level2" ><li class="level3 nav-1-1-8-1 first"><a href="http://www.gramedia.com/categories/books/diet-health/aging-well-rejuvenation.html" data-id="402" data-name="Aging Well &amp; Rejuvenation" class="level3 " >Aging Well &amp; Rejuvenation</a></li><li class="level3 nav-1-1-8-2"><a href="http://www.gramedia.com/categories/books/diet-health/beauty-grooming.html" data-id="403" data-name="Beauty &amp; Grooming" class="level3 " >Beauty &amp; Grooming</a></li><li class="level3 nav-1-1-8-3"><a href="http://www.gramedia.com/categories/books/diet-health/diet-nutrition.html" data-id="404" data-name="Diet &amp; Nutrition" class="level3 " >Diet &amp; Nutrition</a></li><li class="level3 nav-1-1-8-4"><a href="http://www.gramedia.com/categories/books/diet-health/diseases-disorders.html" data-id="405" data-name="Diseases &amp; Disorders" class="level3 " >Diseases &amp; Disorders</a></li><li class="level3 nav-1-1-8-5 last"><a href="http://www.gramedia.com/categories/books/diet-health/health.html" data-id="406" data-name="Health" class="level3 " >Health</a></li></ul></li><li class="level2 nav-1-1-9 parent"><a href="http://www.gramedia.com/categories/books/education-teaching.html" data-id="319" data-name="Education &amp; Teaching" class="level2 has-children" >Education &amp; Teaching</a><ul class="level2" ><li class="level3 nav-1-1-9-1 first"><a href="http://www.gramedia.com/categories/books/education-teaching/academic-administration.html" data-id="407" data-name="Academic Administration" class="level3 " >Academic Administration</a></li><li class="level3 nav-1-1-9-2"><a href="http://www.gramedia.com/categories/books/education-teaching/education.html" data-id="408" data-name="Education" class="level3 " >Education</a></li><li class="level3 nav-1-1-9-3"><a href="http://www.gramedia.com/categories/books/education-teaching/educational-guidance-counseling.html" data-id="409" data-name="Educational Guidance &amp; Counseling" class="level3 " >Educational Guidance &amp; Counseling</a></li><li class="level3 nav-1-1-9-4"><a href="http://www.gramedia.com/categories/books/education-teaching/special-education.html" data-id="410" data-name="Special Education" class="level3 " >Special Education</a></li><li class="level3 nav-1-1-9-5 last"><a href="http://www.gramedia.com/categories/books/education-teaching/teaching-teacher-training.html" data-id="411" data-name="Teaching &amp; Teacher Training" class="level3 " >Teaching &amp; Teacher Training</a></li></ul></li><li class="level2 nav-1-1-10 parent"><a href="http://www.gramedia.com/categories/books/engineering.html" data-id="320" data-name="Engineering" class="level2 has-children" >Engineering</a><ul class="level2" ><li class="level3 nav-1-1-10-1 first"><a href="http://www.gramedia.com/categories/books/engineering/aerospace-engineering.html" data-id="412" data-name="Aerospace Engineering" class="level3 " >Aerospace Engineering</a></li><li class="level3 nav-1-1-10-2"><a href="http://www.gramedia.com/categories/books/engineering/chemical-engineering.html" data-id="413" data-name="Chemical Engineering" class="level3 " >Chemical Engineering</a></li><li class="level3 nav-1-1-10-3"><a href="http://www.gramedia.com/categories/books/engineering/civil-structural-engineering.html" data-id="414" data-name="Civil &amp; Structural Engineering" class="level3 " >Civil &amp; Structural Engineering</a></li><li class="level3 nav-1-1-10-4"><a href="http://www.gramedia.com/categories/books/engineering/computer-technology.html" data-id="415" data-name="Computer Technology" class="level3 " >Computer Technology</a></li><li class="level3 nav-1-1-10-5"><a href="http://www.gramedia.com/categories/books/engineering/electrical-electronic-engineering.html" data-id="416" data-name="Electrical &amp; Electronic Engineering" class="level3 " >Electrical &amp; Electronic Engineering</a></li><li class="level3 nav-1-1-10-6"><a href="http://www.gramedia.com/categories/books/engineering/industrial-engineering.html" data-id="417" data-name="Industrial Engineering" class="level3 " >Industrial Engineering</a></li><li class="level3 nav-1-1-10-7"><a href="http://www.gramedia.com/categories/books/engineering/mechanical-engineering.html" data-id="419" data-name="Mechanical Engineering" class="level3 " >Mechanical Engineering</a></li><li class="level3 nav-1-1-10-8 last"><a href="http://www.gramedia.com/categories/books/engineering/telecommunications.html" data-id="421" data-name="Telecommunications" class="level3 " >Telecommunications</a></li></ul></li></div><div class="li-level2-container"><li class="level2 nav-1-1-11 parent"><a href="http://www.gramedia.com/categories/books/entertainment.html" data-id="321" data-name="Entertainment" class="level2 has-children" >Entertainment</a><ul class="level2" ><li class="level3 nav-1-1-11-1 first"><a href="http://www.gramedia.com/categories/books/entertainment/dance.html" data-id="422" data-name="Dance" class="level3 " >Dance</a></li><li class="level3 nav-1-1-11-2"><a href="http://www.gramedia.com/categories/books/entertainment/film-movies.html" data-id="423" data-name="Film / Movies" class="level3 " >Film / Movies</a></li><li class="level3 nav-1-1-11-3"><a href="http://www.gramedia.com/categories/books/entertainment/games.html" data-id="424" data-name="Games" class="level3 " >Games</a></li><li class="level3 nav-1-1-11-4"><a href="http://www.gramedia.com/categories/books/entertainment/humor.html" data-id="425" data-name="Humor" class="level3 " >Humor</a></li><li class="level3 nav-1-1-11-5"><a href="http://www.gramedia.com/categories/books/entertainment/music-and-songs.html" data-id="426" data-name="Music and Songs" class="level3 " >Music and Songs</a></li><li class="level3 nav-1-1-11-6 last"><a href="http://www.gramedia.com/categories/books/entertainment/performing-arts.html" data-id="427" data-name="Performing Arts" class="level3 " >Performing Arts</a></li></ul></li><li class="level2 nav-1-1-12 parent"><a href="http://www.gramedia.com/categories/books/home-garden.html" data-id="322" data-name="Home &amp; Garden" class="level2 has-children" >Home &amp; Garden</a><ul class="level2" ><li class="level3 nav-1-1-12-1 first"><a href="http://www.gramedia.com/categories/books/home-garden/antiques-collectibles.html" data-id="429" data-name="Antiques &amp; Collectibles" class="level3 " >Antiques &amp; Collectibles</a></li><li class="level3 nav-1-1-12-2"><a href="http://www.gramedia.com/categories/books/home-garden/crafts-hobbies.html" data-id="431" data-name="Crafts &amp; Hobbies" class="level3 " >Crafts &amp; Hobbies</a></li><li class="level3 nav-1-1-12-3"><a href="http://www.gramedia.com/categories/books/home-garden/gardening-and-landscaping.html" data-id="433" data-name="Gardening and Landscaping" class="level3 " >Gardening and Landscaping</a></li><li class="level3 nav-1-1-12-4 last"><a href="http://www.gramedia.com/categories/books/home-garden/house-home.html" data-id="435" data-name="House &amp; Home" class="level3 " >House &amp; Home</a></li></ul></li><li class="level2 nav-1-1-13 parent"><a href="http://www.gramedia.com/categories/books/law.html" data-id="323" data-name="Law" class="level2 has-children" >Law</a><ul class="level2" ><li class="level3 nav-1-1-13-1 first"><a href="http://www.gramedia.com/categories/books/law/business-commercial-financial-law.html" data-id="436" data-name="Business, Commercial &amp; Financial Law" class="level3 " >Business, Commercial &amp; Financial Law</a></li><li class="level3 nav-1-1-13-2"><a href="http://www.gramedia.com/categories/books/law/civil-rights-law.html" data-id="438" data-name="Civil Rights Law" class="level3 " >Civil Rights Law</a></li><li class="level3 nav-1-1-13-3"><a href="http://www.gramedia.com/categories/books/law/constitutional-law.html" data-id="441" data-name="Constitutional Law" class="level3 " >Constitutional Law</a></li><li class="level3 nav-1-1-13-4"><a href="http://www.gramedia.com/categories/books/law/criminal-law.html" data-id="442" data-name="Criminal Law" class="level3 " >Criminal Law</a></li><li class="level3 nav-1-1-13-5"><a href="http://www.gramedia.com/categories/books/law/foreign-international-law.html" data-id="443" data-name="Foreign &amp; International Law" class="level3 " >Foreign &amp; International Law</a></li><li class="level3 nav-1-1-13-6"><a href="http://www.gramedia.com/categories/books/law/indigenous-law.html" data-id="446" data-name="Indigenous Law" class="level3 " >Indigenous Law</a></li><li class="level3 nav-1-1-13-7"><a href="http://www.gramedia.com/categories/books/law/others-law.html" data-id="449" data-name="Others" class="level3 " >Others</a></li><li class="level3 nav-1-1-13-8"><a href="http://www.gramedia.com/categories/books/law/real-estate-property-law.html" data-id="450" data-name="Real Estate &amp; Property Law" class="level3 " >Real Estate &amp; Property Law</a></li><li class="level3 nav-1-1-13-9 last"><a href="http://www.gramedia.com/categories/books/law/religious-law.html" data-id="451" data-name="Religious Law" class="level3 " >Religious Law</a></li></ul></li><li class="level2 nav-1-1-14 parent"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal.html" data-id="324" data-name="Magazines, Tabloid &amp; Journal" class="level2 has-children" >Magazines, Tabloid &amp; Journal</a><ul class="level2" ><li class="level3 nav-1-1-14-1 first"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/business.html" data-id="452" data-name="Business" class="level3 " >Business</a></li><li class="level3 nav-1-1-14-2"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/children.html" data-id="453" data-name="Children" class="level3 " >Children</a></li><li class="level3 nav-1-1-14-3"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/entertainment.html" data-id="455" data-name="Entertainment" class="level3 " >Entertainment</a></li><li class="level3 nav-1-1-14-4"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/health.html" data-id="457" data-name="Health" class="level3 " >Health</a></li><li class="level3 nav-1-1-14-5"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/lifestyle.html" data-id="459" data-name="Lifestyle" class="level3 " >Lifestyle</a></li><li class="level3 nav-1-1-14-6"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/news.html" data-id="460" data-name="News" class="level3 " >News</a></li><li class="level3 nav-1-1-14-7"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/other.html" data-id="461" data-name="Other" class="level3 " >Other</a></li><li class="level3 nav-1-1-14-8 last"><a href="http://www.gramedia.com/categories/books/magazines-tabloid-journal/science.html" data-id="463" data-name="Science" class="level3 " >Science</a></li></ul></li><li class="level2 nav-1-1-15 parent"><a href="http://www.gramedia.com/categories/books/medical.html" data-id="325" data-name="Medical" class="level2 has-children" >Medical</a><ul class="level2" ><li class="level3 nav-1-1-15-1 first"><a href="http://www.gramedia.com/categories/books/medical/alternative-medicine.html" data-id="464" data-name="Alternative Medicine" class="level3 " >Alternative Medicine</a></li><li class="level3 nav-1-1-15-2"><a href="http://www.gramedia.com/categories/books/medical/clinical-medicine.html" data-id="466" data-name="Clinical Medicine" class="level3 " >Clinical Medicine</a></li><li class="level3 nav-1-1-15-3"><a href="http://www.gramedia.com/categories/books/medical/health-related-professions.html" data-id="468" data-name="Health-Related Professions" class="level3 " >Health-Related Professions</a></li><li class="level3 nav-1-1-15-4"><a href="http://www.gramedia.com/categories/books/medical/medicine.html" data-id="470" data-name="Medicine" class="level3 " >Medicine</a></li><li class="level3 nav-1-1-15-5"><a href="http://www.gramedia.com/categories/books/medical/nursing.html" data-id="471" data-name="Nursing" class="level3 " >Nursing</a></li><li class="level3 nav-1-1-15-6 last"><a href="http://www.gramedia.com/categories/books/medical/veterinary-medicine.html" data-id="473" data-name="Veterinary Medicine" class="level3 " >Veterinary Medicine</a></li></ul></li><li class="level2 nav-1-1-16"><a href="http://www.gramedia.com/categories/books/non-fiction.html" data-id="658" data-name="Non Fiction" class="level2 " >Non Fiction</a></li><li class="level2 nav-1-1-17 parent"><a href="http://www.gramedia.com/categories/books/parenting-family.html" data-id="326" data-name="Parenting &amp; Family" class="level2 has-children" >Parenting &amp; Family</a><ul class="level2" ><li class="level3 nav-1-1-17-1 first"><a href="http://www.gramedia.com/categories/books/parenting-family/aging-eldercare.html" data-id="488" data-name="Aging &amp; Eldercare" class="level3 " >Aging &amp; Eldercare</a></li><li class="level3 nav-1-1-17-2"><a href="http://www.gramedia.com/categories/books/parenting-family/children-with-special-needs.html" data-id="490" data-name="Children with Special Needs" class="level3 " >Children with Special Needs</a></li><li class="level3 nav-1-1-17-3"><a href="http://www.gramedia.com/categories/books/parenting-family/family.html" data-id="491" data-name="Family" class="level3 " >Family</a></li><li class="level3 nav-1-1-17-4"><a href="http://www.gramedia.com/categories/books/parenting-family/infants-toddlers.html" data-id="492" data-name="Infants &amp; Toddlers" class="level3 " >Infants &amp; Toddlers</a></li><li class="level3 nav-1-1-17-5"><a href="http://www.gramedia.com/categories/books/parenting-family/pregnancy-childbirth.html" data-id="494" data-name="Pregnancy &amp; Childbirth" class="level3 " >Pregnancy &amp; Childbirth</a></li><li class="level3 nav-1-1-17-6 last"><a href="http://www.gramedia.com/categories/books/parenting-family/teenagers.html" data-id="496" data-name="Teenagers" class="level3 " >Teenagers</a></li></ul></li><li class="level2 nav-1-1-18 parent"><a href="http://www.gramedia.com/categories/books/philosophy.html" data-id="327" data-name="Philosophy" class="level2 has-children" >Philosophy</a><ul class="level2" ><li class="level3 nav-1-1-18-1 first"><a href="http://www.gramedia.com/categories/books/philosophy/asian-philosophy.html" data-id="499" data-name="Asian Philosophy" class="level3 " >Asian Philosophy</a></li><li class="level3 nav-1-1-18-2"><a href="http://www.gramedia.com/categories/books/philosophy/european-american-philosophy.html" data-id="500" data-name="European &amp; American Philosophy" class="level3 " >European &amp; American Philosophy</a></li><li class="level3 nav-1-1-18-3"><a href="http://www.gramedia.com/categories/books/philosophy/major-branches-of-philosophical-study.html" data-id="501" data-name="Major Branches of Philosophical Study" class="level3 " >Major Branches of Philosophical Study</a></li><li class="level3 nav-1-1-18-4 last"><a href="http://www.gramedia.com/categories/books/philosophy/philosophical-positions-movements.html" data-id="502" data-name="Philosophical Positions &amp; Movements" class="level3 " >Philosophical Positions &amp; Movements</a></li></ul></li><li class="level2 nav-1-1-19 parent"><a href="http://www.gramedia.com/categories/books/psychology.html" data-id="328" data-name="Psychology" class="level2 has-children" >Psychology</a><ul class="level2" ><li class="level3 nav-1-1-19-1 first"><a href="http://www.gramedia.com/categories/books/psychology/applied-psychology.html" data-id="503" data-name="Applied Psychology" class="level3 " >Applied Psychology</a></li><li class="level3 nav-1-1-19-2"><a href="http://www.gramedia.com/categories/books/psychology/clinical-psychology.html" data-id="505" data-name="Clinical Psychology" class="level3 " >Clinical Psychology</a></li><li class="level3 nav-1-1-19-3"><a href="http://www.gramedia.com/categories/books/psychology/parapsychology.html" data-id="508" data-name="Parapsychology" class="level3 " >Parapsychology</a></li><li class="level3 nav-1-1-19-4 last"><a href="http://www.gramedia.com/categories/books/psychology/psychological-disorders.html" data-id="509" data-name="Psychological Disorders" class="level3 " >Psychological Disorders</a></li></ul></li><li class="level2 nav-1-1-20 parent"><a href="http://www.gramedia.com/categories/books/reference-dictionary.html" data-id="329" data-name="Reference &amp; Dictionary" class="level2 has-children" >Reference &amp; Dictionary</a><ul class="level2" ><li class="level3 nav-1-1-20-1 first"><a href="http://www.gramedia.com/categories/books/reference-dictionary/almanacs.html" data-id="513" data-name="Almanacs" class="level3 " >Almanacs</a></li><li class="level3 nav-1-1-20-2"><a href="http://www.gramedia.com/categories/books/reference-dictionary/atlases-maps.html" data-id="515" data-name="Atlases &amp; Maps" class="level3 " >Atlases &amp; Maps</a></li><li class="level3 nav-1-1-20-3"><a href="http://www.gramedia.com/categories/books/reference-dictionary/consumer-guides.html" data-id="518" data-name="Consumer Guides" class="level3 " >Consumer Guides</a></li><li class="level3 nav-1-1-20-4"><a href="http://www.gramedia.com/categories/books/reference-dictionary/encyclopedias.html" data-id="520" data-name="Encyclopedias" class="level3 " >Encyclopedias</a></li><li class="level3 nav-1-1-20-5"><a href="http://www.gramedia.com/categories/books/reference-dictionary/foreign-language-study-aids.html" data-id="521" data-name="Foreign-language Study Aids" class="level3 " >Foreign-language Study Aids</a></li><li class="level3 nav-1-1-20-6"><a href="http://www.gramedia.com/categories/books/reference-dictionary/indonesian-language-study-aids.html" data-id="522" data-name="Indonesian Language Study Aids" class="level3 " >Indonesian Language Study Aids</a></li><li class="level3 nav-1-1-20-7"><a href="http://www.gramedia.com/categories/books/reference-dictionary/language-dictionaries-thesaurus.html" data-id="523" data-name="Language Dictionaries &amp; Thesaurus" class="level3 " >Language Dictionaries &amp; Thesaurus</a></li><li class="level3 nav-1-1-20-8"><a href="http://www.gramedia.com/categories/books/reference-dictionary/military-reference.html" data-id="525" data-name="Military Reference" class="level3 " >Military Reference</a></li><li class="level3 nav-1-1-20-9"><a href="http://www.gramedia.com/categories/books/reference-dictionary/school-guides-test-preparation.html" data-id="527" data-name="School Guides &amp; Test Preparation" class="level3 " >School Guides &amp; Test Preparation</a></li><li class="level3 nav-1-1-20-10 last"><a href="http://www.gramedia.com/categories/books/reference-dictionary/science-dictionaries.html" data-id="529" data-name="Science Dictionaries" class="level3 " >Science Dictionaries</a></li></ul></li></div><div class="li-level2-container"><li class="level2 nav-1-1-21 parent"><a href="http://www.gramedia.com/categories/books/religion-spirituality.html" data-id="330" data-name="Religion &amp; Spirituality" class="level2 has-children" >Religion &amp; Spirituality</a><ul class="level2" ><li class="level3 nav-1-1-21-1 first"><a href="http://www.gramedia.com/categories/books/religion-spirituality/buddhism.html" data-id="532" data-name="Buddhism" class="level3 " >Buddhism</a></li><li class="level3 nav-1-1-21-2"><a href="http://www.gramedia.com/categories/books/religion-spirituality/catholicism.html" data-id="533" data-name="Catholicism" class="level3 " >Catholicism</a></li><li class="level3 nav-1-1-21-3"><a href="http://www.gramedia.com/categories/books/religion-spirituality/christianity.html" data-id="534" data-name="Christianity" class="level3 " >Christianity</a></li><li class="level3 nav-1-1-21-4"><a href="http://www.gramedia.com/categories/books/religion-spirituality/hinduism.html" data-id="535" data-name="Hinduism" class="level3 " >Hinduism</a></li><li class="level3 nav-1-1-21-5"><a href="http://www.gramedia.com/categories/books/religion-spirituality/islam.html" data-id="536" data-name="Islam" class="level3 " >Islam</a></li><li class="level3 nav-1-1-21-6"><a href="http://www.gramedia.com/categories/books/religion-spirituality/new-age-alternative-beliefs.html" data-id="537" data-name="New Age &amp; Alternative Beliefs" class="level3 " >New Age &amp; Alternative Beliefs</a></li><li class="level3 nav-1-1-21-7 last"><a href="http://www.gramedia.com/categories/books/religion-spirituality/spirituality.html" data-id="538" data-name="Spirituality" class="level3 " >Spirituality</a></li></ul></li><li class="level2 nav-1-1-22 parent"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum.html" data-id="332" data-name="Schoolbooks Indonesia Curriculum" class="level2 has-children" >Schoolbooks Indonesia Curriculum</a><ul class="level2" ><li class="level3 nav-1-1-22-1 first"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/junior-high-school-1-smp.html" data-id="504" data-name="Junior High School 1 (SMP)" class="level3 " >Junior High School 1 (SMP)</a></li><li class="level3 nav-1-1-22-2"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/junior-high-school-2-smp.html" data-id="506" data-name="Junior High School 2 (SMP)" class="level3 " >Junior High School 2 (SMP)</a></li><li class="level3 nav-1-1-22-3"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/primary-1.html" data-id="511" data-name="Primary 1" class="level3 " >Primary 1</a></li><li class="level3 nav-1-1-22-4"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/primary-2.html" data-id="512" data-name="Primary 2" class="level3 " >Primary 2</a></li><li class="level3 nav-1-1-22-5"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/primary-3.html" data-id="514" data-name="Primary 3" class="level3 " >Primary 3</a></li><li class="level3 nav-1-1-22-6"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/primary-4.html" data-id="516" data-name="Primary 4" class="level3 " >Primary 4</a></li><li class="level3 nav-1-1-22-7"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/primary-6.html" data-id="519" data-name="Primary 6" class="level3 " >Primary 6</a></li><li class="level3 nav-1-1-22-8"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/senior-high-school-1-sma.html" data-id="526" data-name="Senior High School 1 (SMA)" class="level3 " >Senior High School 1 (SMA)</a></li><li class="level3 nav-1-1-22-9"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/senior-high-school-2-sma.html" data-id="528" data-name="Senior High School 2 (SMA)" class="level3 " >Senior High School 2 (SMA)</a></li><li class="level3 nav-1-1-22-10 last"><a href="http://www.gramedia.com/categories/books/schoolbooks-indonesia-curriculum/senior-high-school-3-sma.html" data-id="530" data-name="Senior High School 3 (SMA)" class="level3 " >Senior High School 3 (SMA)</a></li></ul></li><li class="level2 nav-1-1-23 parent"><a href="http://www.gramedia.com/categories/books/science-nature.html" data-id="336" data-name="Science &amp; Nature" class="level2 has-children" >Science &amp; Nature</a><ul class="level2" ><li class="level3 nav-1-1-23-1 first"><a href="http://www.gramedia.com/categories/books/science-nature/aquatic-life.html" data-id="475" data-name="Aquatic Life" class="level3 " >Aquatic Life</a></li><li class="level3 nav-1-1-23-2"><a href="http://www.gramedia.com/categories/books/science-nature/biology.html" data-id="476" data-name="Biology" class="level3 " >Biology</a></li><li class="level3 nav-1-1-23-3"><a href="http://www.gramedia.com/categories/books/science-nature/chemistry.html" data-id="477" data-name="Chemistry" class="level3 " >Chemistry</a></li><li class="level3 nav-1-1-23-4"><a href="http://www.gramedia.com/categories/books/science-nature/climate-meteorology.html" data-id="478" data-name="Climate &amp; Meteorology" class="level3 " >Climate &amp; Meteorology</a></li><li class="level3 nav-1-1-23-5"><a href="http://www.gramedia.com/categories/books/science-nature/cosmos.html" data-id="479" data-name="Cosmos" class="level3 " >Cosmos</a></li><li class="level3 nav-1-1-23-6"><a href="http://www.gramedia.com/categories/books/science-nature/ecology-environment.html" data-id="481" data-name="Ecology &amp; Environment" class="level3 " >Ecology &amp; Environment</a></li><li class="level3 nav-1-1-23-7"><a href="http://www.gramedia.com/categories/books/science-nature/mathematics.html" data-id="482" data-name="Mathematics" class="level3 " >Mathematics</a></li><li class="level3 nav-1-1-23-8"><a href="http://www.gramedia.com/categories/books/science-nature/earth-sciences.html" data-id="480" data-name="Earth Sciences" class="level3 " >Earth Sciences</a></li><li class="level3 nav-1-1-23-9 last"><a href="http://www.gramedia.com/categories/books/science-nature/physics.html" data-id="483" data-name="Physics" class="level3 " >Physics</a></li></ul></li><li class="level2 nav-1-1-24 parent"><a href="http://www.gramedia.com/categories/books/self-improvement.html" data-id="338" data-name="Self Improvement" class="level2 has-children" >Self Improvement</a><ul class="level2" ><li class="level3 nav-1-1-24-1 first"><a href="http://www.gramedia.com/categories/books/self-improvement/emotional-healing.html" data-id="465" data-name="Emotional Healing" class="level3 " >Emotional Healing</a></li><li class="level3 nav-1-1-24-2"><a href="http://www.gramedia.com/categories/books/self-improvement/inspiration.html" data-id="467" data-name="Inspiration" class="level3 " >Inspiration</a></li><li class="level3 nav-1-1-24-3"><a href="http://www.gramedia.com/categories/books/self-improvement/personal-growth.html" data-id="469" data-name="Personal Growth" class="level3 " >Personal Growth</a></li><li class="level3 nav-1-1-24-4"><a href="http://www.gramedia.com/categories/books/self-improvement/psychological-self-help.html" data-id="472" data-name="Psychological Self-help" class="level3 " >Psychological Self-help</a></li><li class="level3 nav-1-1-24-5 last"><a href="http://www.gramedia.com/categories/books/self-improvement/relationships.html" data-id="474" data-name="Relationships" class="level3 " >Relationships</a></li></ul></li><li class="level2 nav-1-1-25 parent"><a href="http://www.gramedia.com/categories/books/social-sciences.html" data-id="339" data-name="Social Sciences" class="level2 has-children" >Social Sciences</a><ul class="level2" ><li class="level3 nav-1-1-25-1 first"><a href="http://www.gramedia.com/categories/books/social-sciences/anthropology-archeology.html" data-id="437" data-name="Anthropology &amp; Archeology" class="level3 " >Anthropology &amp; Archeology</a></li><li class="level3 nav-1-1-25-2"><a href="http://www.gramedia.com/categories/books/social-sciences/biography.html" data-id="440" data-name="Biography" class="level3 " >Biography</a></li><li class="level3 nav-1-1-25-3"><a href="http://www.gramedia.com/categories/books/social-sciences/criminology.html" data-id="444" data-name="Criminology" class="level3 " >Criminology</a></li><li class="level3 nav-1-1-25-4"><a href="http://www.gramedia.com/categories/books/social-sciences/culture.html" data-id="445" data-name="Culture" class="level3 " >Culture</a></li><li class="level3 nav-1-1-25-5"><a href="http://www.gramedia.com/categories/books/social-sciences/history.html" data-id="447" data-name="History" class="level3 " >History</a></li><li class="level3 nav-1-1-25-6"><a href="http://www.gramedia.com/categories/books/social-sciences/media-communications.html" data-id="448" data-name="Media &amp; Communications" class="level3 " >Media &amp; Communications</a></li><li class="level3 nav-1-1-25-7"><a href="http://www.gramedia.com/categories/books/social-sciences/politics.html" data-id="456" data-name="Politics" class="level3 " >Politics</a></li><li class="level3 nav-1-1-25-8 last"><a href="http://www.gramedia.com/categories/books/social-sciences/sociology.html" data-id="458" data-name="Sociology" class="level3 " >Sociology</a></li></ul></li><li class="level2 nav-1-1-26 parent"><a href="http://www.gramedia.com/categories/books/sports-adventure.html" data-id="340" data-name="Sports &amp; Adventure" class="level2 has-children" >Sports &amp; Adventure</a><ul class="level2" ><li class="level3 nav-1-1-26-1 first"><a href="http://www.gramedia.com/categories/books/sports-adventure/aquatic-sports.html" data-id="391" data-name="Aquatic Sports" class="level3 " >Aquatic Sports</a></li><li class="level3 nav-1-1-26-2"><a href="http://www.gramedia.com/categories/books/sports-adventure/athletics.html" data-id="418" data-name="Athletics" class="level3 " >Athletics</a></li><li class="level3 nav-1-1-26-3"><a href="http://www.gramedia.com/categories/books/sports-adventure/games.html" data-id="420" data-name="Games" class="level3 " >Games</a></li><li class="level3 nav-1-1-26-4"><a href="http://www.gramedia.com/categories/books/sports-adventure/gymnastics.html" data-id="428" data-name="Gymnastics" class="level3 " >Gymnastics</a></li><li class="level3 nav-1-1-26-5"><a href="http://www.gramedia.com/categories/books/sports-adventure/indoor.html" data-id="430" data-name="Indoor" class="level3 " >Indoor</a></li><li class="level3 nav-1-1-26-6"><a href="http://www.gramedia.com/categories/books/sports-adventure/outdoor.html" data-id="432" data-name="Outdoor" class="level3 " >Outdoor</a></li><li class="level3 nav-1-1-26-7 last"><a href="http://www.gramedia.com/categories/books/sports-adventure/self-defense.html" data-id="434" data-name="Self Defense" class="level3 " >Self Defense</a></li></ul></li><li class="level2 nav-1-1-27 parent"><a href="http://www.gramedia.com/categories/books/others.html" data-id="342" data-name="Others" class="level2 has-children" >Others</a><ul class="level2" ><li class="level3 nav-1-1-27-1 first parent"><a href="http://www.gramedia.com/categories/books/others/promotion.html" data-id="543" data-name="Promotion" class="level3 has-children" >Promotion</a><ul class="level3" ><li class="level4 nav-1-1-27-1-1 first"><a href="http://www.gramedia.com/categories/books/others/promotion/promoruangbuku.html" data-id="697" data-name="Promo Ruang Buku" class="level4 " >Promo Ruang Buku</a></li><li class="level4 nav-1-1-27-1-2"><a href="http://www.gramedia.com/categories/books/others/promotion/promoruangnonbuku.html" data-id="698" data-name="Promo Ruang Non Buku" class="level4 " >Promo Ruang Non Buku</a></li><li class="level4 nav-1-1-27-1-3 last"><a href="http://www.gramedia.com/categories/books/others/promotion/promoruangbukunew.html" data-id="714" data-name="Promo Ruang Buku New" class="level4 " >Promo Ruang Buku New</a></li></ul></li><li class="level3 nav-1-1-27-2"><a href="http://www.gramedia.com/categories/books/others/seri-tempo.html" data-id="708" data-name="Seri Tempo" class="level3 " >Seri Tempo</a></li><li class="level3 nav-1-1-27-3"><a href="http://www.gramedia.com/categories/books/others/kitab-suci.html" data-id="711" data-name="Kitab Suci" class="level3 " >Kitab Suci</a></li><li class="level3 nav-1-1-27-4 last"><a href="http://www.gramedia.com/categories/books/others/kompasiana.html" data-id="712" data-name="kompasiana" class="level3 " >kompasiana</a></li></ul></li><li class="level2 nav-1-1-28"><a href="http://www.gramedia.com/categories/books/import-books.html" data-id="666" data-name="Import Books" class="level2 " >Import Books</a></li><li class="level2 nav-1-1-29 last"><a href="http://www.gramedia.com/categories/books/design-grafis.html" data-id="667" data-name="Design" class="level2 " >Design</a></li></ul></li><li class="level1 nav-1-2 parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -194px no-repeat' data-bip=' -247px -194px ' data-biph=' -494px -194px '><a href="http://www.gramedia.com/categories/stationery.html" data-id="301" data-name="Stationery" class="level1 has-children" >Stationery<span class='triangle'></span></a><ul class="level1" style="width:233px;"><span class='nav-sub-img' style='background:url(http://wpc.21684.lambdacdn.net/8021684/cdn/media/category/bkg-category-sprites.png) -258px 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-2-1 first parent"><a href="http://www.gramedia.com/categories/stationery/school-equipment.html" data-id="371" data-name="School Equipment" class="level2 has-children" >School Equipment</a><ul class="level2" ><li class="level3 nav-1-2-1-1 first last"><a href="http://www.gramedia.com/categories/stationery/school-equipment/writing-book.html" data-id="676" data-name="Writing Book" class="level3 " >Writing Book</a></li></ul></li><li class="level2 nav-1-2-2"><a href="http://www.gramedia.com/categories/stationery/office-equipment.html" data-id="369" data-name="Office Equipment" class="level2 " >Office Equipment</a></li><li class="level2 nav-1-2-3"><a href="http://www.gramedia.com/categories/stationery/drafting-art-supplies.html" data-id="372" data-name="Drafting &amp; Art Supplies" class="level2 " >Drafting &amp; Art Supplies</a></li><li class="level2 nav-1-2-4 parent"><a href="http://www.gramedia.com/categories/stationery/writing-instrument.html" data-id="373" data-name="Writing Instrument" class="level2 has-children" >Writing Instrument</a><ul class="level2" ><li class="level3 nav-1-2-4-1 first last"><a href="http://www.gramedia.com/categories/stationery/writing-instrument/parker.html" data-id="541" data-name="Parker" class="level3 " >Parker</a></li></ul></li><li class="level2 nav-1-2-5 last parent"><a href="http://www.gramedia.com/categories/stationery/coloring-instrument.html" data-id="677" data-name="Coloring Instrument" class="level2 has-children" >Coloring Instrument</a><ul class="level2" ><li class="level3 nav-1-2-5-1 first"><a href="http://www.gramedia.com/categories/stationery/coloring-instrument/colored-pencil.html" data-id="678" data-name="Colored Pencil" class="level3 " >Colored Pencil</a></li><li class="level3 nav-1-2-5-2"><a href="http://www.gramedia.com/categories/stationery/coloring-instrument/crayon.html" data-id="679" data-name="Crayon" class="level3 " >Crayon</a></li><li class="level3 nav-1-2-5-3 last"><a href="http://www.gramedia.com/categories/stationery/coloring-instrument/marker.html" data-id="680" data-name="Marker" class="level3 " >Marker</a></li></ul></li></ul></li><li class="level1 nav-1-3 parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -236px no-repeat' data-bip=' -247px -236px ' data-biph=' -494px -236px '><a href="http://www.gramedia.com/categories/household.html" data-id="302" data-name="Household" class="level1 has-children" >Household<span class='triangle'></span></a><ul class="level1" style="width:233px;"><span class='nav-sub-img' style='background:url(http://wpc.21684.lambdacdn.net/8021684/cdn/media/category/bkg-category-sprites.png) -516px 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-3-1 first"><a href="http://www.gramedia.com/categories/household/electronics.html" data-id="366" data-name="Electronics" class="level2 " >Electronics</a></li><li class="level2 nav-1-3-2 parent"><a href="http://www.gramedia.com/categories/household/office-school.html" data-id="368" data-name="Office &amp; School" class="level2 has-children" >Office &amp; School</a><ul class="level2" ><li class="level3 nav-1-3-2-1 first last"><a href="http://www.gramedia.com/categories/household/office-school/alfalink.html" data-id="545" data-name="Alfalink" class="level3 " >Alfalink</a></li></ul></li><li class="level2 nav-1-3-3"><a href="http://www.gramedia.com/categories/household/bedroom-appliances.html" data-id="588" data-name="Bedroom Appliances" class="level2 " >Bedroom Appliances</a></li><li class="level2 nav-1-3-4"><a href="http://www.gramedia.com/categories/household/kitchen-dining-appliances.html" data-id="589" data-name="Kitchen &amp; Dining Appliances" class="level2 " >Kitchen &amp; Dining Appliances</a></li><li class="level2 nav-1-3-5"><a href="http://www.gramedia.com/categories/household/furniture.html" data-id="590" data-name="Furniture" class="level2 " >Furniture</a></li><li class="level2 nav-1-3-6 last"><a href="http://www.gramedia.com/categories/household/food-beverage.html" data-id="591" data-name="Food &amp; Beverage" class="level2 " >Food &amp; Beverage</a></li></ul></li><li class="level1 nav-1-4 parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -278px no-repeat' data-bip=' -247px -278px ' data-biph=' -494px -278px '><a href="http://www.gramedia.com/categories/health-beauty.html" data-id="303" data-name="Health &amp; Beauty" class="level1 has-children" >Health &amp; Beauty<span class='triangle'></span></a><ul class="level1" style="width:233px;"><span class='nav-sub-img' style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/megamenu/bkg-category-beauty.png) 0 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-4-1 first parent"><a href="http://www.gramedia.com/categories/health-beauty/makeup.html" data-id="593" data-name="MakeUp" class="level2 has-children" >MakeUp</a><ul class="level2" ><li class="level3 nav-1-4-1-1 first"><a href="http://www.gramedia.com/categories/health-beauty/makeup/face.html" data-id="625" data-name="Face" class="level3 " >Face</a></li><li class="level3 nav-1-4-1-2"><a href="http://www.gramedia.com/categories/health-beauty/makeup/eyes.html" data-id="626" data-name="Eyes" class="level3 " >Eyes</a></li><li class="level3 nav-1-4-1-3"><a href="http://www.gramedia.com/categories/health-beauty/makeup/lips.html" data-id="627" data-name="Lips" class="level3 " >Lips</a></li><li class="level3 nav-1-4-1-4 last"><a href="http://www.gramedia.com/categories/health-beauty/makeup/nails.html" data-id="628" data-name="Nails" class="level3 " >Nails</a></li></ul></li><li class="level2 nav-1-4-2 parent"><a href="http://www.gramedia.com/categories/health-beauty/fragrances.html" data-id="594" data-name="Fragrances" class="level2 has-children" >Fragrances</a><ul class="level2" ><li class="level3 nav-1-4-2-1 first"><a href="http://www.gramedia.com/categories/health-beauty/fragrances/men-s-fragrances.html" data-id="635" data-name="Men's Fragrances" class="level3 " >Men's Fragrances</a></li><li class="level3 nav-1-4-2-2 last"><a href="http://www.gramedia.com/categories/health-beauty/fragrances/women-s-fragrances.html" data-id="636" data-name="Women's Fragrances" class="level3 " >Women's Fragrances</a></li></ul></li><li class="level2 nav-1-4-3"><a href="http://www.gramedia.com/categories/health-beauty/vitamins-dietary-supplements.html" data-id="648" data-name="Vitamins and Dietary Supplements" class="level2 " >Vitamins and Dietary Supplements</a></li><li class="level2 nav-1-4-4 last"><a href="http://www.gramedia.com/categories/health-beauty/skin-care.html" data-id="649" data-name="Skin care" class="level2 " >Skin care</a></li></ul></li><li class="level1 nav-1-5 parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -319px no-repeat' data-bip=' -247px -319px ' data-biph=' -494px -319px '><a href="http://www.gramedia.com/categories/lifestyle.html" data-id="304" data-name="Lifestyle" class="level1 has-children" >Lifestyle<span class='triangle'></span></a><ul class="level1" style="width:233px;"><span class='nav-sub-img' style='background:url(http://wpc.21684.lambdacdn.net/8021684/cdn/media/category/bkg-category-sprites.png) -1032px 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-5-1 first parent"><a href="http://www.gramedia.com/categories/lifestyle/bag.html" data-id="344" data-name="Bags" class="level2 has-children" >Bags</a><ul class="level2" ><li class="level3 nav-1-5-1-1 first"><a href="http://www.gramedia.com/categories/lifestyle/bag/tonga.html" data-id="539" data-name="Tonga" class="level3 " >Tonga</a></li><li class="level3 nav-1-5-1-2"><a href="http://www.gramedia.com/categories/lifestyle/bag/eversac.html" data-id="540" data-name="Eversac" class="level3 " >Eversac</a></li><li class="level3 nav-1-5-1-3"><a href="http://www.gramedia.com/categories/lifestyle/bag/bagpacks.html" data-id="597" data-name="Bagpacks" class="level3 " >Bagpacks</a></li><li class="level3 nav-1-5-1-4"><a href="http://www.gramedia.com/categories/lifestyle/bag/pouches.html" data-id="598" data-name="Pouches" class="level3 " >Pouches</a></li><li class="level3 nav-1-5-1-5"><a href="http://www.gramedia.com/categories/lifestyle/bag/sling-bags.html" data-id="599" data-name="Sling bags" class="level3 " >Sling bags</a></li><li class="level3 nav-1-5-1-6"><a href="http://www.gramedia.com/categories/lifestyle/bag/pulcher.html" data-id="665" data-name="Pulcher" class="level3 " >Pulcher</a></li><li class="level3 nav-1-5-1-7"><a href="http://www.gramedia.com/categories/lifestyle/bag/jahning.html" data-id="675" data-name="Jahning" class="level3 " >Jahning</a></li><li class="level3 nav-1-5-1-8"><a href="http://www.gramedia.com/categories/lifestyle/bag/taranaki.html" data-id="681" data-name="Taranaki" class="level3 " >Taranaki</a></li><li class="level3 nav-1-5-1-9 last"><a href="http://www.gramedia.com/categories/lifestyle/bag/troosbag.html" data-id="682" data-name="Troosbag" class="level3 " >Troosbag</a></li></ul></li><li class="level2 nav-1-5-2"><a href="http://www.gramedia.com/categories/lifestyle/shoes.html" data-id="345" data-name="Shoes" class="level2 " >Shoes</a></li><li class="level2 nav-1-5-3 parent"><a href="http://www.gramedia.com/categories/lifestyle/t-shirt.html" data-id="349" data-name="T-Shirt" class="level2 has-children" >T-Shirt</a><ul class="level2" ><li class="level3 nav-1-5-3-1 first last"><a href="http://www.gramedia.com/categories/lifestyle/t-shirt/kriko.html" data-id="661" data-name="Kriko" class="level3 " >Kriko</a></li></ul></li><li class="level2 nav-1-5-4 parent"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff.html" data-id="592" data-name="Unique Stuff" class="level2 has-children" >Unique Stuff</a><ul class="level2" ><li class="level3 nav-1-5-4-1 first parent"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff/toys.html" data-id="629" data-name="Toys" class="level3 has-children" >Toys</a><ul class="level3" ><li class="level4 nav-1-5-4-1-1 first last"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff/toys/educational-toys.html" data-id="631" data-name="Educational Toys" class="level4 " >Educational Toys</a></li></ul></li><li class="level3 nav-1-5-4-2 last parent"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff/merchandise.html" data-id="630" data-name="Merchandise" class="level3 has-children" >Merchandise</a><ul class="level3" ><li class="level4 nav-1-5-4-2-1 first"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff/merchandise/kriko.html" data-id="641" data-name="Kriko" class="level4 " >Kriko</a></li><li class="level4 nav-1-5-4-2-2"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff/merchandise/kompasiana.html" data-id="642" data-name="Kompasiana" class="level4 " >Kompasiana</a></li><li class="level4 nav-1-5-4-2-3 last"><a href="http://www.gramedia.com/categories/lifestyle/unique-stuff/merchandise/88-love-life.html" data-id="643" data-name="88 Love Life" class="level4 " >88 Love Life</a></li></ul></li></ul></li><li class="level2 nav-1-5-5 parent"><a href="http://www.gramedia.com/categories/lifestyle/fashion.html" data-id="595" data-name="Fashion" class="level2 has-children" >Fashion</a><ul class="level2" ><li class="level3 nav-1-5-5-1 first"><a href="http://www.gramedia.com/categories/lifestyle/fashion/outers.html" data-id="612" data-name="Outers" class="level3 " >Outers</a></li><li class="level3 nav-1-5-5-2 parent"><a href="http://www.gramedia.com/categories/lifestyle/fashion/watches.html" data-id="613" data-name="Watches" class="level3 has-children" >Watches</a><ul class="level3" ><li class="level4 nav-1-5-5-2-1 first"><a href="http://www.gramedia.com/categories/lifestyle/fashion/watches/casio.html" data-id="673" data-name="Casio" class="level4 " >Casio</a></li><li class="level4 nav-1-5-5-2-2 last"><a href="http://www.gramedia.com/categories/lifestyle/fashion/watches/swiss-army.html" data-id="674" data-name="Swiss Army" class="level4 " >Swiss Army</a></li></ul></li><li class="level3 nav-1-5-5-3"><a href="http://www.gramedia.com/categories/lifestyle/fashion/organizers.html" data-id="614" data-name="Organizers" class="level3 " >Organizers</a></li><li class="level3 nav-1-5-5-4"><a href="http://www.gramedia.com/categories/lifestyle/fashion/brooch.html" data-id="615" data-name="Brooch" class="level3 " >Brooch</a></li><li class="level3 nav-1-5-5-5"><a href="http://www.gramedia.com/categories/lifestyle/fashion/necklace.html" data-id="616" data-name="Necklace" class="level3 " >Necklace</a></li><li class="level3 nav-1-5-5-6"><a href="http://www.gramedia.com/categories/lifestyle/fashion/wallet.html" data-id="617" data-name="Wallet" class="level3 " >Wallet</a></li><li class="level3 nav-1-5-5-7 parent"><a href="http://www.gramedia.com/categories/lifestyle/fashion/tops.html" data-id="619" data-name="Tops" class="level3 has-children" >Tops</a><ul class="level3" ><li class="level4 nav-1-5-5-7-1 first last"><a href="http://www.gramedia.com/categories/lifestyle/fashion/tops/blouses.html" data-id="632" data-name="Blouses" class="level4 " >Blouses</a></li></ul></li><li class="level3 nav-1-5-5-8"><a href="http://www.gramedia.com/categories/lifestyle/fashion/kid-s-fashion.html" data-id="620" data-name="Kid's Fashion" class="level3 " >Kid's Fashion</a></li><li class="level3 nav-1-5-5-9"><a href="http://www.gramedia.com/categories/lifestyle/fashion/dresses.html" data-id="621" data-name="Dresses" class="level3 " >Dresses</a></li><li class="level3 nav-1-5-5-10 parent"><a href="http://www.gramedia.com/categories/lifestyle/fashion/muslim-s-fashion.html" data-id="622" data-name="Muslim's Fashion" class="level3 has-children" >Muslim's Fashion</a><ul class="level3" ><li class="level4 nav-1-5-5-10-1 first"><a href="http://www.gramedia.com/categories/lifestyle/fashion/muslim-s-fashion/scarves-shawls.html" data-id="637" data-name="Scarves &amp; Shawls" class="level4 " >Scarves &amp; Shawls</a></li><li class="level4 nav-1-5-5-10-2"><a href="http://www.gramedia.com/categories/lifestyle/fashion/muslim-s-fashion/women-s-arab-style-shirt.html" data-id="638" data-name="Women's Arab-style shirt" class="level4 " >Women's Arab-style shirt</a></li><li class="level4 nav-1-5-5-10-3"><a href="http://www.gramedia.com/categories/lifestyle/fashion/muslim-s-fashion/men-s-arab-style-shirt.html" data-id="639" data-name="Men's Arab-style shirt" class="level4 " >Men's Arab-style shirt</a></li><li class="level4 nav-1-5-5-10-4 last"><a href="http://www.gramedia.com/categories/lifestyle/fashion/muslim-s-fashion/kids-arab-style-shirt.html" data-id="640" data-name="Kids' Arab-style shirt" class="level4 " >Kids' Arab-style shirt</a></li></ul></li><li class="level3 nav-1-5-5-11"><a href="http://www.gramedia.com/categories/lifestyle/fashion/jacket.html" data-id="623" data-name="Jacket" class="level3 " >Jacket</a></li><li class="level3 nav-1-5-5-12 last parent"><a href="http://www.gramedia.com/categories/lifestyle/fashion/bottoms.html" data-id="624" data-name="Bottoms" class="level3 has-children" >Bottoms</a><ul class="level3" ><li class="level4 nav-1-5-5-12-1 first"><a href="http://www.gramedia.com/categories/lifestyle/fashion/bottoms/skirts.html" data-id="633" data-name="Skirts" class="level4 " >Skirts</a></li><li class="level4 nav-1-5-5-12-2 last"><a href="http://www.gramedia.com/categories/lifestyle/fashion/bottoms/pants.html" data-id="634" data-name="Pants" class="level4 " >Pants</a></li></ul></li></ul></li><li class="level2 nav-1-5-6 parent"><a href="http://www.gramedia.com/categories/lifestyle/ticket.html" data-id="596" data-name="Ticket" class="level2 has-children" >Ticket</a><ul class="level2" ><li class="level3 nav-1-5-6-1 first"><a href="http://www.gramedia.com/categories/lifestyle/ticket/seminar.html" data-id="608" data-name="Seminar" class="level3 " >Seminar</a></li><li class="level3 nav-1-5-6-2"><a href="http://www.gramedia.com/categories/lifestyle/ticket/event.html" data-id="609" data-name="Event" class="level3 " >Event</a></li><li class="level3 nav-1-5-6-3"><a href="http://www.gramedia.com/categories/lifestyle/ticket/music.html" data-id="610" data-name="Music" class="level3 " >Music</a></li><li class="level3 nav-1-5-6-4 last"><a href="http://www.gramedia.com/categories/lifestyle/ticket/travel.html" data-id="611" data-name="Travel" class="level3 " >Travel</a></li></ul></li><li class="level2 nav-1-5-7 last parent"><a href="http://www.gramedia.com/categories/lifestyle/magazine.html" data-id="662" data-name="Magazine" class="level2 has-children" >Magazine</a><ul class="level2" ><li class="level3 nav-1-5-7-1 first last"><a href="http://www.gramedia.com/categories/lifestyle/magazine/adult-magazine.html" data-id="663" data-name="Adult Magazine" class="level3 " >Adult Magazine</a></li></ul></li></ul></li><li class="level1 nav-1-6 parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -364px no-repeat' data-bip=' -247px -364px ' data-biph=' -494px -364px '><a href="http://www.gramedia.com/categories/hobbies.html" data-id="305" data-name="Hobbies" class="level1 has-children" >Hobbies<span class='triangle'></span></a><ul class="level1" style="width:233px;"><span class='nav-sub-img' style='background:url(http://wpc.21684.lambdacdn.net/8021684/cdn/media/category/bkg-category-sprites.png) -1290px 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-6-1 first"><a href="http://www.gramedia.com/categories/hobbies/sport.html" data-id="341" data-name="Sport" class="level2 " >Sport</a></li><li class="level2 nav-1-6-2 last"><a href="http://www.gramedia.com/categories/hobbies/automotive.html" data-id="587" data-name="Automotives" class="level2 " >Automotives</a></li></ul></li><li class="level1 nav-1-7 parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -403px no-repeat' data-bip=' -247px -403px ' data-biph=' -494px -403px '><a href="http://www.gramedia.com/categories/computer-gadget.html" data-id="306" data-name="Computer &amp; Gadget" class="level1 has-children" >Computer &amp; Gadget<span class='triangle'></span></a><ul class="level1" style="width:474px;"><span class='nav-sub-img' style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/megamenu/bkg-category-computer.png) 0 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-7-1 first"><a href="http://www.gramedia.com/categories/computer-gadget/gadget.html" data-id="333" data-name="Gadget Accessories" class="level2 " >Gadget Accessories</a></li><li class="level2 nav-1-7-2 parent"><a href="http://www.gramedia.com/categories/computer-gadget/computer-accessories.html" data-id="337" data-name="Computer Accessories" class="level2 has-children" >Computer Accessories</a><ul class="level2" ><li class="level3 nav-1-7-2-1 first last"><a href="http://www.gramedia.com/categories/computer-gadget/computer-accessories/holidayseason.html" data-id="277" data-name="PROMOTION" class="level3 " >PROMOTION</a></li></ul></li><li class="level2 nav-1-7-3"><a href="http://www.gramedia.com/categories/computer-gadget/charger.html" data-id="600" data-name="Charger" class="level2 " >Charger</a></li><li class="level2 nav-1-7-4"><a href="http://www.gramedia.com/categories/computer-gadget/headset.html" data-id="601" data-name="Headset" class="level2 " >Headset</a></li><li class="level2 nav-1-7-5"><a href="http://www.gramedia.com/categories/computer-gadget/keyboard.html" data-id="602" data-name="Keyboard" class="level2 " >Keyboard</a></li><li class="level2 nav-1-7-6"><a href="http://www.gramedia.com/categories/computer-gadget/mouse.html" data-id="603" data-name="Mouse" class="level2 " >Mouse</a></li><li class="level2 nav-1-7-7"><a href="http://www.gramedia.com/categories/computer-gadget/screen-protector.html" data-id="604" data-name="Screen Protector" class="level2 " >Screen Protector</a></li><li class="level2 nav-1-7-8"><a href="http://www.gramedia.com/categories/computer-gadget/handphone-tablet.html" data-id="605" data-name="Handphone &amp; Tablet" class="level2 " >Handphone &amp; Tablet</a></li><li class="level2 nav-1-7-9"><a href="http://www.gramedia.com/categories/computer-gadget/accessories.html" data-id="606" data-name="Accessories" class="level2 " >Accessories</a></li><li class="level2 nav-1-7-10"><a href="http://www.gramedia.com/categories/computer-gadget/camera.html" data-id="607" data-name="Camera" class="level2 " >Camera</a></li></div><div class="li-level2-container"><li class="level2 nav-1-7-11 last"><a href="http://www.gramedia.com/categories/computer-gadget/miscellaneous.html" data-id="695" data-name="Miscellaneous" class="level2 " >Miscellaneous</a></li></ul></li><li class="level1 nav-1-8 last parent" style='background:url(http://www.gramedia.com/skin/frontend/gramedia/default/images/gramedia-icon-sprites.png) -247px -445px no-repeat' data-bip=' -247px -445px ' data-biph=' -494px -445px '><a href="http://www.gramedia.com/categories/kids-babies-toys.html" data-id="307" data-name="Kids, Babies &amp; Toys" class="level1 has-children" >Kids, Babies &amp; Toys<span class='triangle'></span></a><ul class="level1" style="width:233px;"><span class='nav-sub-img' style='background:url(http://wpc.21684.lambdacdn.net/8021684/cdn/media/category/bkg-category-sprites.png) -1806px 0 no-repeat'></span><div class="li-level2-container"><li class="level2 nav-1-8-1 first parent"><a href="http://www.gramedia.com/categories/kids-babies-toys/dolls.html" data-id="311" data-name="Dolls" class="level2 has-children" >Dolls</a><ul class="level2" ><li class="level3 nav-1-8-1-1 first last"><a href="http://www.gramedia.com/categories/kids-babies-toys/dolls/dokii-kuku-rock-you.html" data-id="544" data-name="Dokii &amp; Kuku Rock You" class="level3 " >Dokii &amp; Kuku Rock You</a></li></ul></li><li class="level2 nav-1-8-2 last parent"><a href="http://www.gramedia.com/categories/kids-babies-toys/toys.html" data-id="546" data-name="Toys" class="level2 has-children" >Toys</a><ul class="level2" ><li class="level3 nav-1-8-2-1 first last"><a href="http://www.gramedia.com/categories/kids-babies-toys/toys/star-wars-holiday-season.html" data-id="705" data-name="Star Wars Holiday Season" class="level3 " >Star Wars Holiday Season</a></li></ul></li></ul></li></ul></li><li class="level0 nav-2"><a href="http://www.gramedia.com/new-arrival.html" data-id="4" data-name="New Arrival" class="level0 " >New Arrival</a></li><li class="level0 nav-3"><a href="http://www.gramedia.com/best-seller.html" data-id="5" data-name="Best Seller" class="level0 " >Best Seller</a></li><li class="level0 nav-4"><a href="https://ruang.gramedia.com" target="_new" class="level0 " >Ruang</a></li><li class="level0 nav-5 last"><a href="http://www.gramedia.com/promo/promo/" data-id="" data-name="Promo" class="level0 " >Promo</a></li> </ol>
+</nav>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var jQ = jQuery.noConflict();
+jQ(document).ready(function(){
+var swiper = new Swiper('.swiper-logo-container', {
+effect: 'cube',
+cube: {
+shadow: false,
+slideShadows: false
+},
+loop: true,
+autoplayDisableOnInteraction: false,
+autoplay: 5000,
+speed: 1000
+});
+});
+//]]>
+</script>
+<div class="main-container col1-layout">
+<div class="main">
+<div class="breadcrumbs-container">
+<div class="breadcrumbs">
+<ul>
+<li class="home">
+<a href="http://www.gramedia.com/" title="Go to Home Page">Home</a>
+<span>&gt; </span>
+</li>
+<li class="product">
+<strong>Tom And Jerry Story Book: Kereta Orient Expres</strong>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-main">
+<div id="amfpc-global_messages"></div> <script type="text/javascript">
+var optionsPrice = new Product.OptionsPrice([]);
+</script>
+<div id="messages_product_view"><div id="amfpc-messages"></div></div>
+<div class="product-view">
+<div class="product-essential">
+<form action="http://www.gramedia.com/checkoutprocess/cart/add/uenc/aHR0cDovL3d3dy5ncmFtZWRpYS5jb20vdG9tLWFuZC1qZXJyeS1zdG9yeS1ib29rLWtlcmV0YS1vcmllbnQtZXhwcmVzLmh0bWw_X19fU0lEPVU,/product/10684/form_key/QhOCi0NzfWAGytkt/" method="post" id="product_addtocart_form">
+<input name="form_key" type="hidden" value="QhOCi0NzfWAGytkt" />
+<div class="no-display">
+<input type="hidden" name="product" value="10684" />
+<input type="hidden" name="related_product" id="related-products-field" value="" />
+</div>
+<div class="product-img-box">
+<div class="product-name">
+<h1>Tom And Jerry Story Book: Kereta Orient Expres</h1>
+</div>
+<div class="product-image product-image-zoom">
+<!--<div class="product-image-gallery">-->
+<img id="image-main"
+class="gallery-image visible"
+src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/catalog/product/cache/1/image/c96a280f94e22e3ee3823dd0a1a87606/placeholder/default/no_image.png"
+alt="Tom And Jerry Story Book: Kereta Orient Expres"
+title="Tom And Jerry Story Book: Kereta Orient Expres"
+data-zoom-image="http://wpc.21684.lambdacdn.net/8021684/cdn/media/catalog/product/cache/1/image/c96a280f94e22e3ee3823dd0a1a87606/placeholder/default/no_image.png" />
+<!--</div>-->
+</div>
+<script type="text/javascript">
+//<![CDATA[
+jQuery.noConflict();
+var zoomConfig = {
+tint: true,
+tintColour: "#fff",
+tintOpacity: 0.5,
+zoomWindowPosition: 1,
+zoomWindowOffetx: 12,
+borderSize: 1,
+borderColour: "#d5d5d5",
+zoomWindowWidth: 505,
+zoomWindowHeight: 459
+};
+jQuery("#image-main").elevateZoom(zoomConfig);
+//fix tintContainer top is in elevateZoom min js, look for 164.5 ( add .css({"top":b.nzOffset.top-164.5+"px"}) after b.tintContainer=d("<div/>").addClass("tintContainer") ) and look for 422 ( replace +a.nzWidth with (jQuery(".product-image-zoom").offset().left+422)-a.$elem.offset().left )
+function changeProductImg(src) {
+// Remove old instance od EZ
+jQuery('.zoomContainer').remove();
+jQuery("#image-main").removeData('elevateZoom');
+// Update source for images
+jQuery("#image-main").attr('src', src);
+jQuery("#image-main").data('zoom-image', src);
+// Reinitialize EZ
+jQuery("#image-main").elevateZoom(zoomConfig);
+}
+//]]>
+</script>
+</div>
+<div class="product-shop">
+<div class="product-name">
+<span class="h1">Tom And Jerry Story Book: Kereta Orient Expres</span>
+</div>
+<div class="product-author">
+by Warner Bros </div>
+</div>
+<div class="product-shop">
+<div class="product-review-top">
+<div class="ratings">
+<div class="rating-box">&nbsp;</div>
+<p class="rating-links">
+<span class="no-review">No Review</span>
+<span class="separator">|</span>
+<a class="reviewFormLink" href="javascript:void(0)">Be the first to review</a>
+</p>
+</div>
+</div>
+<div class="product-sharing">
+<div class="sharing-header">Share with your friends</div>
+<ul class="sharing-links">
+<li>
+<a href="http://www.facebook.com/sharer.php?u=http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html" target="_blank" title="Share on Facebook" class="link-facebook">Facebook</a> </li>
+<li>
+<a title="Share on Twitter" target="_blank" class="link-twitter" data-count="none" data-lang="en" href="http://twitter.com/share?url=http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html&text=Tom And Jerry Story Book: Kereta Orient Expres&hashtags=Gramedia">Twitter</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</li>
+<li>
+<a href="https://plus.google.com/share?url=http://www.gramedia.com/tom-and-jerry-story-book-kereta-orient-expres.html" target="_blank" title="Share on Google+" class="link-gplus">Share on</a> </li>
+<li><a href="http://www.gramedia.com/sendfriend/product/send/id/10684/" class="link-email-friend" title="Email to a Friend">Share via</a></li>
+</ul>
+</div>
+</div>
+<div class="product-shop">
+<span class="product-code">Product Number: 204050135</span>
+<span class="product-separator">|</span>
+<span class="product-isbn">ISBN: 9789797796426</span>
+</div>
+<div class="product-shop">
+<div class="extra-info">
+<p class="availability out-of-stock">
+<span class="label">Availability:</span>
+<span class="value">Out of stock</span>
+</p>
+</div>
+<div class="price-info">
+<div class="price-box">
+<p class="old-price">
+<span class="price-label">Regular Price:</span>
+<span class="price" id="old-price-10684">
+Rp 23.000 </span>
+</p>
+<p class="special-price">
+<span class="price-label">Special Price</span>
+<span class="price" id="product-price-10684">
+Rp 19.550 </span>
+<span class="special-price-save">save 15%</span>
+</p>
+</div>
+</div>
+</div>
+<div class="product-shop">
+<div class="add-to-cart-wrapper">
+<div class="add-to-box">
+<div class="add-to out-of-stock ">
+<a href="http://www.gramedia.com/wishlist/index/add/product/10684/form_key/QhOCi0NzfWAGytkt/" onclick="productAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist"><span>+</span>&nbsp;&nbsp;&nbsp;&nbsp;Add to Wishlist</a>
+</div>
+</div>
+</div>
+</div>
+<div class="cover"></div>
+<div class="popup" style="display:none">
+<h2>Buku yang akan Anda beli adalah dalam format Digital dan Anda tidak akan menerima dalam versi Cetak.</h2>
+<div class="button-container">
+<div class="button confirm">OK</div>
+<div class="button close">Cancel</div>
+</div>
+</div>
+<div class="product-shop">
+<script type="text/javascript">
+//<![CDATA[
+var jQ = jQuery.noConflict();
+jQ(document).ready(
+function() {
+var shortDesc = jQ(".short-description .std .short-desc");
+var fullDesc = jQ(".short-description .std .full-desc");
+fullDesc.hide();
+jQ("#readMoreDescLink").on("click", function(){
+shortDesc.hide();
+fullDesc.show();
+});
+jQ("#viewLessDescLink").on("click", function(){
+fullDesc.hide();
+shortDesc.show();
+});
+}
+);
+//]]>
+</script>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+var productAddToCartForm = new VarienForm('product_addtocart_form');
+var flag = "idle";
+productAddToCartForm.submit = function(button, url) {
+if (this.validator.validate()) {
+var form = this.form;
+var oldUrl = form.action;
+if (url) {
+form.action = url;
+}
+var e = null;
+var textcontain = $j( ".book-type-option.active" ).text();
+if (textcontain.indexOf("eBook") >= 0){
+try {
+if ( flag == "idle" ) {
+$j(".popup").fadeIn(500);
+$j(".cover").fadeTo(500, 0.5);
+}
+else if ( flag == "confirmed" ) {
+this.form.submit();
+$j(".popup").fadeOut(500);
+$j(".cover").fadeOut(500);
+}
+} catch (e) {
+}
+this.form.action = oldUrl;
+if (e) {
+throw e;
+}
+if (button && button != 'undefined') {
+button.disabled = true;
+}
+$j(".popup .close").click(function () {
+$j(".popup").fadeOut(500);
+$j(".cover").fadeOut(500);
+button.disabled = false;
+});
+} else{
+try {
+this.form.submit();
+} catch (e) {
+}
+this.form.action = oldUrl;
+if (e) {
+throw e;
+}
+if (button && button != 'undefined') {
+button.disabled = true;
+}
+}
+}
+}.bind(productAddToCartForm);
+productAddToCartForm.submitLight = function(button, url){
+if(this.validator) {
+var nv = Validation.methods;
+delete Validation.methods['required-entry'];
+delete Validation.methods['validate-one-required'];
+delete Validation.methods['validate-one-required-by-name'];
+// Remove custom datetime validators
+for (var methodName in Validation.methods) {
+if (methodName.match(/^validate-datetime-.*/i)) {
+delete Validation.methods[methodName];
+}
+}
+if (this.validator.validate()) {
+if (url) {
+this.form.action = url;
+}
+this.form.submit();
+}
+Object.extend(Validation.methods, nv);
+}
+}.bind(productAddToCartForm);
+var jQ = jQuery.noConflict();
+jQ(document).ready(
+function() {
+jQ(".popup .confirm").on("click", function(){
+flag = "confirmed";
+jQ( ".add-to-cart-wrapper .button.btn-cart" ).trigger( "click" );
+});
+jQ("a.reviewFormLink").on("click", function(){
+jQ('html,body').animate({ scrollTop: (jQ("#review-form-container").offset().top) - 150 }, 'slow');
+});
+jQ("a.reviewListLink").on("click", function(){
+jQ('html,body').animate({ scrollTop: (jQ("#review-container").offset().top) - 150 }, 'slow');
+});
+}
+);
+//]]>
+</script>
+</div>
+<div class="collateral-container">
+<div class="collateral-main">
+<div class="collateral-sub">
+</div>
+<div class="collateral-sub">
+</div>
+<div class="collateral-sub">
+</div>
+<div class="collateral-sub">
+<h2>Product Details</h2>
+<div class="std">
+<table class="data-table" id="product-attribute-specs-table">
+<col width="25%" />
+<col />
+<tbody>
+<tr>
+<th class="label">Publisher</th>
+<td class="data">CITRA SASTRA NOVELTIS</td>
+</tr>
+<tr>
+<th class="label">ISBN</th>
+<td class="data">9789797796426</td>
+</tr>
+<tr>
+<th class="label">Estimated Weight</th>
+<td class="data">0.30 kg</td>
+</tr>
+<tr>
+<th class="label">Publish Date</th>
+<td class="data">Sep 4, 2014</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
+</div>
+<div class="collateral-sub" id="review-container">
+<h2>Review</h2>
+<div class="box-collateral box-reviews" id="customer-reviews">
+</div>
+<div id="review-form-container" class="box-collateral box-reviews">
+<div class="form-add">
+<h2>Write Your Review</h2>
+<form action="http://www.gramedia.com/review/product/post/id/10684/" method="post" id="review-form">
+<input name="form_key" type="hidden" value="QhOCi0NzfWAGytkt" />
+<div class="fieldset">
+<span id="input-message-box"></span>
+<table class="data-table review-summary-table ratings" id="product-review-table">
+<col width="32px" />
+<col width="32px" />
+<col width="50px" />
+<col width="69px" />
+<col width="87px" />
+<thead>
+<tr>
+<th>
+<div class="rating-box" style="width:16px">
+<span class="rating-number">1</span>
+<span class="rating nobr">1 star</span>
+</div>
+<span class="rating-title">Poor</span>
+</th>
+<th>
+<div class="rating-box" style="width:32px">
+<span class="rating-number">2</span>
+<span class="rating nobr">2 star</span>
+</div>
+<span class="rating-title">Bad</span>
+</th>
+<th>
+<div class="rating-box" style="width:50px">
+<span class="rating-number">3</span>
+<span class="rating nobr">3 star</span>
+</div>
+<span class="rating-title">Medium</span>
+</th>
+<th>
+<div class="rating-box" style="width:69px">
+<span class="rating-number">4</span>
+<span class="rating nobr">4 star</span>
+</div>
+<span class="rating-title">Good</span>
+</th>
+<th>
+<div class="rating-box" style="width:87px">
+<span class="rating-number">5</span>
+<span class="rating nobr">5 star</span>
+</div>
+<span class="rating-title">Excellent</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="value">
+<div class="form-review-container">
+<input type="radio" name="ratings[4]" id="Rating_1" value="16" class="radio" /><label class="form-review-option" for="Rating_1"></label>
+</div>
+</td>
+<td class="value">
+<div class="form-review-container">
+<input type="radio" name="ratings[4]" id="Rating_2" value="17" class="radio" /><label class="form-review-option" for="Rating_2"></label>
+</div>
+</td>
+<td class="value">
+<div class="form-review-container">
+<input type="radio" name="ratings[4]" id="Rating_3" value="18" class="radio" /><label class="form-review-option" for="Rating_3"></label>
+</div>
+</td>
+<td class="value">
+<div class="form-review-container">
+<input type="radio" name="ratings[4]" id="Rating_4" value="19" class="radio" /><label class="form-review-option" for="Rating_4"></label>
+</div>
+</td>
+<td class="value">
+<div class="form-review-container">
+<input type="radio" name="ratings[4]" id="Rating_5" value="20" class="radio" /><label class="form-review-option" for="Rating_5"></label>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="validate_rating" class="validate-rating" value="" />
+<script type="text/javascript">decorateTable('product-review-table')</script>
+<ul class="form-list">
+<li class="inline-label">
+<label for="nickname_field" class="required"><em>*</em>Name</label>
+<div class="input-box">
+<input type="text" name="nickname" id="nickname_field" class="input-text required-entry" value="" />
+</div>
+</li>
+<li class="inline-label">
+<label for="summary_field" class="required"><em>*</em>Review Title</label>
+<div class="input-box">
+<input type="text" name="title" id="summary_field" class="input-text required-entry" value="" />
+</div>
+</li>
+<li>
+<label for="review_field" class="required"><em>*</em>Review</label>
+<div class="input-box">
+<textarea name="detail" id="review_field" cols="5" rows="3" class="required-entry" spellcheck="false"></textarea>
+</div>
+</li>
+<li>
+<script type="text/javascript">
+var onloadCallback = function () {
+grecaptcha.render('recaptcha_html_element', {
+'sitekey': '6Lfx8RkTAAAAAO7wVVVh8tMtulbijgRXiwt5tjP8'
+});
+};
+</script>
+<div id="recaptcha_html_element"></div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+</li>
+</ul>
+</div>
+<div class="buttons-set">
+<button type="submit" title="Submit Review" class="button"><span><span>Submit Review</span></span></button>
+<p class="required">* Required Fields</p>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+var dataForm = new VarienForm('review-form');
+Validation.addAllThese(
+[
+['validate-rating', 'Please select one of each of the ratings above', function(v) {
+var trs = $('product-review-table').select('tr');
+var inputs;
+var error = 1;
+for( var j=0; j < trs.length; j++ ) {
+var tr = trs[j];
+if( j > 0 ) {
+inputs = tr.select('input');
+for( i in inputs ) {
+if( inputs[i].checked == true ) {
+error = 0;
+}
+}
+if( error == 1 ) {
+return false;
+} else {
+error = 1;
+}
+}
+}
+return true;
+}]
+]
+);
+//]]>
+</script>
+</div>
+</div>
+</div>
+</div>
+<div class="right-column">
+<p><span class="right-promo"><a href="https://goo.gl/Vl4Sa9"><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/banners/homepage/promo-buku-seri-tempo-gramediacom-square-small-banner.jpg" alt="" width="261" height="261" /></a></span></p> <ul class="bxslider">
+<p><span class="right-promo"><a href="http://bit.ly/2pysEtA"><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/banners/homepage/01-why-series-national-flag.png" alt="" width="261" height="261" /></a></span>
+<p><span class="right-promo"><a href="http://bit.ly/2qqeS0p"><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/banners/homepage/02-MIMS-Petunjuk-konsultasi.png" alt="" width="261" height="261" /></a></span> </p>
+<p><span class="right-promo"><a href="http://bit.ly/2qqrMvt"><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/banners/homepage/03-kamus-inggris-indonesia.png" alt="" width="261" height="261" /></a></span> </p>
+</ul> </div>
+</div>
+</div>
+<script type="text/javascript">
+var lifetime = 3600;
+var expireAt = Mage.Cookies.expires;
+if (lifetime > 0) {
+expireAt = new Date();
+expireAt.setTime(expireAt.getTime() + lifetime * 1000);
+}
+Mage.Cookies.set('external_no_cache', 1, expireAt);
+</script>
+</div>
+</div>
+</div>
+<div class="footer-container">
+<div class="footer-top-wrapper">
+<div class="footer-top">
+<div class="block block-subscribe">
+<form action="http://www.gramedia.com/newsletter/subscriber/new/" method="post" id="newsletter-validate-detail">
+<div class="block-content">
+<div class="subscribe-text">
+<div class="block-title">
+<strong><span>Be in the know</span></strong>
+</div>
+<div class="form-subscribe-header">
+<label for="newsletter">Sign up for news & updates</label>
+</div>
+</div>
+<div class="subscribe-form">
+<div class="input-box">
+<input type="email" autocapitalize="off" autocorrect="off" spellcheck="false" name="email" id="newsletter" title="Sign up for our newsletter" class="input-text required-entry validate-email" placeholder="Enter your email address" />
+</div>
+<div class="actions">
+<button type="submit" title="Subscribe" class="button btn-subscribe"><span><span>Subscribe</span></span></button>
+</div>
+</div>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+//]]>
+</script>
+</div>
+<div class="social-container">
+<div class="social-text">
+<span style="float:right">
+<span class="social-header">Keep Up With Us</span>
+<span>Follow our social accounts</span>
+</span>
+</div>
+<div class="social-link">
+<a class="social-facebook" href="http://www.facebook.com/gramediacom" target="_blank"></a>
+<a class="social-twitter" href="http://www.twitter.com/gramedia_com" target="_blank"></a>
+<a class="social-youtube" href="https://www.youtube.com/channel/UCobQJNq_dkDETba7MS-3Ssg" target="_blank"></a>
+</div>
+</div> </div>
+</div>
+<div class="footer">
+<div class="links">
+<div class="block-title"><strong><span>About Us</span></strong></div>
+<ul>
+<li><a href="http://www.gramedia.com/about-us/">Our Company</a></li>
+<li><a href="http://www.gramedia.com/privacy-policy/">Privacy Policy</a></li>
+<li><a href="http://www.gramedia.com/terms-conditions/">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<div class="links">
+<div class="block-title"><strong><span>Account</span></strong></div>
+<ul>
+<li><a href="http://www.gramedia.com/customer/account/">My Account</a></li>
+<li><a href="http://www.gramedia.com/how-to-shop/">How to Shop</a></li>
+<li><a href="http://www.gramedia.com/how-to-buy-ebook/">How to Shop & Read eBook by SCOOP</a></li>
+<li><a href="http://www.gramedia.com/sales/order/history/">My Order History</a></li>
+</ul>
+</div>
+<div class="links">
+<div class="block-title"><strong><span>Shipping &amp; Delivery</span></strong></div>
+<ul>
+<li><a href="http://www.gramedia.com/shipping-policy/">Shipping Policy</a></li>
+<li><a href="http://www.gramedia.com/return-policy/">Return Policy</a></li>
+<li><a href="http://www.gramedia.com/refund-policy/">Refund Policy</a></li>
+<!--<li><a href="http://www.gramedia.com/catalogsearch/advanced/">Advanced Search</a></li>-->
+</ul>
+</div>
+<div class="links">
+<div class="block-title"><strong><span>Contact Us</span></strong></div>
+<ul>
+<li><a href="http://www.gramedia.com/contacts/">Contact Us</a></li>
+<!--<li><a href="http://www.gramedia.com/customer-service/">Customer Care</a></li>-->
+<li><a href="http://www.gramedia.com/store-locator/">Store Locations</a></li>
+</ul>
+</div>
+<div class="links">
+<ul>
+<li class="logo-title">Payment Method</li>
+<li class='footer-img'><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/footer/footer-payment-method.png" alt="" width="210" height="89" /></li>
+<li class="logo-title">Shipping Courier</li>
+<li class='footer-img'><img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/footer/footer-shipping-cariers-maret.png" alt="" width="216" height="37" /></li>
+</ul>
+</div> <!-- edited mamang -->
+<!--<div class="footer-logo"> <img src="http://wpc.21684.lambdacdn.net/8021684/cdn/media/wysiwyg/footer/footer-logo.png" alt="" width="200" height="28" /></div>-->
+<address class="copyright">Copyright &copy; 2016 Gramedia. All Rights Reserved.</address>
+</div>
+</div>
+</div>
+</div>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W9GR2W7');</script>
+<!-- End Google Tag Manager --><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7c25058c40","applicationID":"22808684","transactionName":"ZVFaMUtZDBcHAk1ZVlwbeQZNUQ0KSQJYRFheW19KSUoNABMCTR9PW1FP","queueTime":0,"applicationTime":72,"atts":"SRZZRwNDHxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
