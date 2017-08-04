@@ -1,5 +1,8 @@
 # umanohone
 
+[![Build Status](https://travis-ci.org/tkesgar/umanohone.svg?branch=master)](https://travis-ci.org/tkesgar/umanohone)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+
 Umanohone is a module to query information about Gramedia products. It works by scraping the page available at [Gramedia store page][gramedia].
 
 Until Gramedia has an official API for use, this should do.
