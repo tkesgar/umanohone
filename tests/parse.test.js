@@ -4,15 +4,7 @@ import cheerio from 'cheerio'
 import test from 'ava'
 import parse from '../lib/parse'
 
-const pages = {}
-
-const testcaseDir = path.resolve(__dirname, 'testcases')
-const testcaseFiles = fs.readdirSync(testcaseDir)
-for (const file of testcaseFiles) {
-  const testcase = file.replace('.html', '')
-  const html = fs.readFileSync(path.resolve(testcaseDir, file))
-  pages[testcase] = cheerio.load(html)
-}
+const pages = _loadPages()
 
 for (const testcase of Object.keys(pages)) {
   const $ = pages[testcase]
@@ -62,4 +54,20 @@ for (const testcase of Object.keys(pages)) {
     const result = parse($)
     t.snapshot(result)
   })
+}
+
+/**
+ * Helper to load the testcase pages as cheerio element.
+ */
+function _loadPages() {
+  const pages = {}
+
+  const dir = path.resolve(__dirname, 'testcases')
+  const files = fs.readdirSync(dir)
+  for (const file of files) {
+    const test = file.replace('.html', '')
+    const html = fs.readFileSync(path.resolve(dir, file))
+    pages[test] = cheerio.load(html)
+  }
+  return pages
 }

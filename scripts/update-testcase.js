@@ -1,8 +1,6 @@
 /* eslint-disable quote-props */
-
 const fs = require('fs')
 const path = require('path')
-
 const request = require('request')
 
 const names = {
