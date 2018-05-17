@@ -1,6 +1,7 @@
 # umanohone
 
-[![Build Status](https://travis-ci.org/tkesgar/umanohone.svg?branch=master)](https://travis-ci.org/tkesgar/umanohone)
+> **DEPRECATED**: Gramedia has a completely new layout based on React, so this module can't be used anymore.
+
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 Umanohone is a module to query information about Gramedia products. It works by scraping the page available at [Gramedia store page][gramedia].
